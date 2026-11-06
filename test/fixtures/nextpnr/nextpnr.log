@@ -1,0 +1,367 @@
+Warning: IO 'rst_n_i' is unconstrained in LPF and will be automatically placed
+Warning: IO 'pass_o' is unconstrained in LPF and will be automatically placed
+Warning: IO 'done_o' is unconstrained in LPF and will be automatically placed
+Warning: IO 'clk_i' is unconstrained in LPF and will be automatically placed
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:      1896/24288     7%
+Info:         logic LUTs:   1480/24288     6%
+Info:         carry LUTs:     32/24288     0%
+Info:           RAM LUTs:    256/ 3036     8%
+Info:          RAMW LUTs:    128/ 6072     2%
+
+Info:      Total DFFs:      1831/24288     7%
+
+Info: Packing IOs..
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     1047 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk_i$TRELLIS_IO_IN to global network
+Info: Checksum: 0x95465ba9
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:       4/    197     2%
+Info: 	                DCCA:       1/     56     1%
+Info: 	              DP16KD:      10/     56    17%
+Info: 	          MULT18X18D:       0/     28     0%
+Info: 	              ALU54B:       0/     14     0%
+Info: 	             EHXPLLL:       0/      2     0%
+Info: 	             EXTREFB:       0/      1     0%
+Info: 	                DCUA:       0/      1     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    128     0%
+Info: 	            SIOLOGIC:       0/     69     0%
+Info: 	                 GSR:       0/      1     0%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/      8     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:    1831/  24288     7%
+Info: 	        TRELLIS_COMB:    1902/  24288     7%
+Info: 	        TRELLIS_RAMW:      64/   3036     2%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 2272 cells, random placement wirelen = 128774.
+Info:     at initial placer iter 0, wirelen = 296
+Info:     at initial placer iter 1, wirelen = 522
+Info:     at initial placer iter 2, wirelen = 487
+Info:     at initial placer iter 3, wirelen = 554
+Info: Running main analytical placer, max placement attempts per cell = 1816418.
+Info:     at iteration #1, type ALL: wirelen solved = 490, spread = 19272, legal = 20730; time = 0.07s
+Info:     at iteration #2, type ALL: wirelen solved = 1129, spread = 15415, legal = 20147; time = 0.06s
+Info:     at iteration #3, type ALL: wirelen solved = 1631, spread = 14774, legal = 21179; time = 0.05s
+Info:     at iteration #4, type ALL: wirelen solved = 2365, spread = 15072, legal = 19327; time = 0.05s
+Info:     at iteration #5, type ALL: wirelen solved = 2690, spread = 14228, legal = 19677; time = 0.05s
+Info:     at iteration #6, type ALL: wirelen solved = 3344, spread = 13231, legal = 20447; time = 0.05s
+Info:     at iteration #7, type ALL: wirelen solved = 3843, spread = 14769, legal = 20904; time = 0.05s
+Info:     at iteration #8, type ALL: wirelen solved = 4658, spread = 14350, legal = 20799; time = 0.05s
+Info:     at iteration #9, type ALL: wirelen solved = 5129, spread = 13564, legal = 19573; time = 0.05s
+Info: HeAP Placer Time: 0.71s
+Info:   of which solving equations: 0.45s
+Info:   of which spreading cells: 0.07s
+Info:   of which strict legalisation: 0.10s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 515, wirelen = 19327
+Info:   at iteration #5: temp = 0.000000, timing cost = 331, wirelen = 15771
+Info:   at iteration #10: temp = 0.000000, timing cost = 699, wirelen = 15390
+Info:   at iteration #15: temp = 0.000000, timing cost = 401, wirelen = 14832
+Info:   at iteration #20: temp = 0.000000, timing cost = 229, wirelen = 14557
+Info:   at iteration #20: temp = 0.000000, timing cost = 219, wirelen = 14601 
+Info: SA placement time 1.97s
+
+Info: Max frequency for clock '$glbnet$clk_i$TRELLIS_IO_IN': 203.71 MHz (FAIL at 250.00 MHz)
+
+Info: Max delay <async>                             -> posedge $glbnet$clk_i$TRELLIS_IO_IN: 0.62 ns
+Info: Max delay posedge $glbnet$clk_i$TRELLIS_IO_IN -> <async>                            : 2.19 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 11 endpoint(s)
+Info:          + represents [1,11) endpoint(s)
+Info: [  -909,   -692) |**+
+Info: [  -692,   -475) |**+
+Info: [  -475,   -258) |****+
+Info: [  -258,    -41) |****+
+Info: [   -41,    176) |********+
+Info: [   176,    393) |*************+
+Info: [   393,    610) |*****************+
+Info: [   610,    827) |************************+
+Info: [   827,   1044) |*****************************+
+Info: [  1044,   1261) |******************************************+
+Info: [  1261,   1478) |*******************************************************+
+Info: [  1478,   1695) |************************************************************ 
+Info: [  1695,   1912) |******************************************+
+Info: [  1912,   2129) |******************************************+
+Info: [  2129,   2346) |*************************+
+Info: [  2346,   2563) |***************************+
+Info: [  2563,   2780) |********************+
+Info: [  2780,   2997) |************+
+Info: [  2997,   3214) |********+
+Info: [  3214,   3431) |********+
+Info: Checksum: 0x81f2f60c
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk_i$TRELLIS_IO_IN using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 10526 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |       33        966 |   33   966 |      9590|       0.24       0.24|
+Info:       2000 |       73       1926 |   40   960 |      8649|       0.14       0.38|
+Info:       3000 |      140       2859 |   67   933 |      7752|       0.14       0.52|
+Info:       4000 |      230       3769 |   90   910 |      6875|       0.19       0.71|
+Info:       5000 |      352       4647 |  122   878 |      6063|       0.17       0.88|
+Info:       6000 |      550       5449 |  198   802 |      5372|       0.20       1.08|
+Info:       7000 |      767       6208 |  217   759 |      4633|       0.20       1.28|
+Info:       8000 |      947       6993 |  180   785 |      3844|       0.15       1.43|
+Info:       9000 |     1114       7809 |  167   816 |      3056|       0.17       1.59|
+Info:      10000 |     1188       8729 |   74   920 |      2136|       0.09       1.68|
+Info:      11000 |     1348       9568 |  160   839 |      1346|       0.16       1.84|
+Info:      12000 |     1553      10363 |  205   795 |       726|       0.23       2.07|
+Info:     5 arcs ripped up due to negative slack WNS=-0.00ns TNS=-0.03ns.
+Info:     0 arcs ripped up due to negative slack WNS=0.00ns TNS=0.00ns.
+Info:          0 |     1979      11261 |  426   898 |         0|       0.36       2.43|
+Info: Routing complete.
+Info: Router1 time 2.43s
+Info: Checksum: 0x8e634a65
+
+Info: Critical path report for clock '$glbnet$clk_i$TRELLIS_IO_IN' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.40  0.40 Source u_aes_top.u_core.u_aes_cipher.state_q_TRELLIS_FF_Q_2.Q
+Info:    routing  1.11  1.51 Net u_aes_top.u_core.u_aes_cipher.state_q[0] (68,8) -> (56,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.state_q_LUT4_D_30.D
+Info:                          Defined in:
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.18  1.69 Source u_aes_top.u_core.u_aes_cipher.state_q_LUT4_D_30.F
+Info:    routing  0.62  2.30 Net u_aes_top.u_core.u_aes_cipher.state_q_LUT4_D_30_Z (56,7) -> (57,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB1.B
+Info:      logic  0.35  2.66 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  2.66 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1_COUT (57,7) -> (57,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  2.71 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB0.FCO
+Info:    routing  0.00  2.71 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_FCI_INT (57,7) -> (57,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB1.FCI
+Info:      logic  0.00  2.71 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB1.FCO
+Info:    routing  0.00  2.71 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4_COUT (57,7) -> (57,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  2.77 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB0.FCO
+Info:    routing  0.00  2.77 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_FCI_INT (57,7) -> (57,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB1.FCI
+Info:      logic  0.00  2.77 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB1.FCO
+Info:    routing  0.00  2.77 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2_COUT (57,7) -> (58,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  2.83 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:    routing  0.00  2.83 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_FCI_INT (58,7) -> (58,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:      logic  0.00  2.83 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:    routing  0.00  2.83 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1_COUT (58,7) -> (58,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  2.88 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB0.FCO
+Info:    routing  0.00  2.88 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_FCI_INT (58,7) -> (58,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB1.FCI
+Info:      logic  0.00  2.88 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB1.FCO
+Info:    routing  0.00  2.88 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT (58,7) -> (58,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  2.94 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB0.FCO
+Info:    routing  0.00  2.94 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_FCI_INT (58,7) -> (58,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB1.FCI
+Info:      logic  0.00  2.94 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB1.FCO
+Info:    routing  0.00  2.94 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14_COUT (58,7) -> (58,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  2.99 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB0.FCO
+Info:    routing  0.00  2.99 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_FCI_INT (58,7) -> (58,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB1.FCI
+Info:      logic  0.00  2.99 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB1.FCO
+Info:    routing  0.00  2.99 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13_COUT (58,7) -> (59,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  3.05 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB0.FCO
+Info:    routing  0.00  3.05 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_FCI_INT (59,7) -> (59,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB1.FCI
+Info:      logic  0.00  3.05 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB1.FCO
+Info:    routing  0.00  3.05 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12_COUT (59,7) -> (59,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  3.11 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB0.FCO
+Info:    routing  0.00  3.11 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_FCI_INT (59,7) -> (59,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB1.FCI
+Info:      logic  0.00  3.11 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB1.FCO
+Info:    routing  0.00  3.11 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11_COUT (59,7) -> (59,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  3.16 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB0.FCO
+Info:    routing  0.00  3.16 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_FCI_INT (59,7) -> (59,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB1.FCI
+Info:      logic  0.00  3.16 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB1.FCO
+Info:    routing  0.00  3.16 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10_COUT (59,7) -> (59,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  3.22 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB0.FCO
+Info:    routing  0.00  3.22 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_FCI_INT (59,7) -> (59,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB1.FCI
+Info:      logic  0.00  3.22 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB1.FCO
+Info:    routing  0.00  3.22 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9_COUT (59,7) -> (60,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  3.28 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB0.FCO
+Info:    routing  0.00  3.28 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_FCI_INT (60,7) -> (60,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB1.FCI
+Info:      logic  0.00  3.28 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB1.FCO
+Info:    routing  0.00  3.28 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8_COUT (60,7) -> (60,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  3.33 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB0.FCO
+Info:    routing  0.00  3.33 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_FCI_INT (60,7) -> (60,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB1.FCI
+Info:      logic  0.00  3.33 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB1.FCO
+Info:    routing  0.00  3.33 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7_COUT (60,7) -> (60,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  3.39 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB0.FCO
+Info:    routing  0.00  3.39 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_FCI_INT (60,7) -> (60,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB1.FCI
+Info:      logic  0.00  3.39 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB1.FCO
+Info:    routing  0.00  3.39 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6_COUT (60,7) -> (60,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  3.44 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB0.FCO
+Info:    routing  0.00  3.44 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_FCI_INT (60,7) -> (60,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB1.FCI
+Info:      logic  0.00  3.44 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB1.FCO
+Info:    routing  0.00  3.44 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5_COUT (60,7) -> (61,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13
+Info:      logic  0.06  3.50 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB0.FCO
+Info:    routing  0.00  3.50 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_FCI_INT (61,7) -> (61,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB1.FCI
+Info:      logic  0.29  3.79 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB1.F
+Info:    routing  0.12  3.91 Net u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[31] (61,7) -> (61,7)
+Info:                          Sink u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q.DI
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84
+Info:                               /Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27
+Info:      setup  0.00  3.91 Source u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q.DI
+Info: 2.06 ns logic, 1.85 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk_i$TRELLIS_IO_IN':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source rst_n_i$tr_io.O
+Info:    routing  0.79  0.79 Net rst_n_i$TRELLIS_IO_IN (72,5) -> (70,5)
+Info:                          Sink rst_sync_q_TRELLIS_FF_Q.M
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/synth/aes_impl_top.sv:64.18-64.25
+Info:      setup  0.00  0.79 Source rst_sync_q_TRELLIS_FF_Q.M
+Info: 0.00 ns logic, 0.79 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk_i$TRELLIS_IO_IN' -> '<async>':
+Info:       type curr  total name
+Info:   clk-to-q  0.40  0.40 Source done_q_TRELLIS_FF_Q.Q
+Info:    routing  1.00  1.39 Net done_o$TRELLIS_IO_OUT (68,14) -> (69,17)
+Info:                          Sink pass_o_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/synth/aes_impl_top.sv:271.19-271.25
+Info:      logic  0.18  1.57 Source pass_o_LUT4_Z.F
+Info:    routing  0.86  2.44 Net pass_o$TRELLIS_IO_OUT (69,17) -> (72,17)
+Info:                          Sink pass_o$tr_io.I
+Info:                          Defined in:
+Info:                               /Users/james/Workspace/AES/synth/aes_impl_top.sv:66.18-66.24
+Info: 0.57 ns logic, 1.86 ns routing
+
+Info: Max frequency for clock '$glbnet$clk_i$TRELLIS_IO_IN': 255.75 MHz (PASS at 250.00 MHz)
+
+Info: Max delay <async>                             -> posedge $glbnet$clk_i$TRELLIS_IO_IN: 0.79 ns
+Info: Max delay posedge $glbnet$clk_i$TRELLIS_IO_IN -> <async>                            : 2.44 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 11 endpoint(s)
+Info:          + represents [1,11) endpoint(s)
+Info: [    90,    251) |**+
+Info: [   251,    412) |****+
+Info: [   412,    573) |****+
+Info: [   573,    734) |******+
+Info: [   734,    895) |*******+
+Info: [   895,   1056) |************+
+Info: [  1056,   1217) |***************+
+Info: [  1217,   1378) |*****************+
+Info: [  1378,   1539) |*******************+
+Info: [  1539,   1700) |**************************+
+Info: [  1700,   1861) |************************************************************ 
+Info: [  1861,   2022) |****************************************************+
+Info: [  2022,   2183) |*****************************************************+
+Info: [  2183,   2344) |***********************************************+
+Info: [  2344,   2505) |*****************************************+
+Info: [  2505,   2666) |*****************************+
+Info: [  2666,   2827) |*******************+
+Info: [  2827,   2988) |***************+
+Info: [  2988,   3149) |***********+
+Info: [  3149,   3310) |*********+
+
+4 warnings, 0 errors
+
+Info: Program finished normally.

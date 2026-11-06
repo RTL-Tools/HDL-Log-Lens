@@ -1,0 +1,163 @@
+%Warning-WIDTHEXPAND: /Users/james/Workspace/AES/src/aes_key_schedule.sv:115:29: Operator FUNCREF 'c_rcon_byte' expects 32 bits on the Function Argument, but Function Argument's VARREF 'rcon_idx' generates 4 bits.
+                                                                               : ... note: In instance 'aes_top.u_core.u_aes_cipher.u_key_schedule'
+  115 |         rcon_q  <= aes_pkg::c_rcon_byte(rcon_idx);
+      |                             ^~~~~~~~~~~
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.039
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/aes_top.sv:97:48: Bits of signal are not used: 'hwif_out'[292:261]
+                                                                      : ... note: In instance 'aes_top'
+   97 |     aes_register_file_axi_lite_pkg::aes__out_t hwif_out;
+      |                                                ^~~~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.039
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/axil_if.sv:63:24: Signal is not used: 'awready'
+                                                                      : ... note: In instance 'aes_top'
+   63 |   logic                awready;
+      |                        ^~~~~~~
+%Warning-UNDRIVEN: /Users/james/Workspace/AES/src/axil_if.sv:62:24: Signal is not driven: 'awvalid'
+                                                                  : ... note: In instance 'aes_top'
+   62 |   logic                awvalid;
+      |                        ^~~~~~~
+                   ... For warning description see https://verilator.org/warn/UNDRIVEN?v=5.039
+                   ... Use "/* verilator lint_off UNDRIVEN */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/axil_if.sv:60:24: Bits of signal are not driven, nor used: 'awaddr'[7]
+                                                                      : ... note: In instance 'aes_top'
+   60 |   logic [ADDR_W-1:0]   awaddr;
+      |                        ^~~~~~
+%Warning-UNDRIVEN: /Users/james/Workspace/AES/src/axil_if.sv:60:24: Bits of signal are not driven: 'awaddr'[6:0]
+                                                                  : ... note: In instance 'aes_top'
+   60 |   logic [ADDR_W-1:0]   awaddr;
+      |                        ^~~~~~
+%Warning-UNDRIVEN: /Users/james/Workspace/AES/src/axil_if.sv:61:24: Signal is not driven: 'awprot'
+                                                                  : ... note: In instance 'aes_top'
+   61 |   logic [2:0]          awprot;
+      |                        ^~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/axil_if.sv:68:24: Signal is not used: 'wready'
+                                                                      : ... note: In instance 'aes_top'
+   68 |   logic                wready;
+      |                        ^~~~~~
+%Warning-UNDRIVEN: /Users/james/Workspace/AES/src/axil_if.sv:67:24: Signal is not driven: 'wvalid'
+                                                                  : ... note: In instance 'aes_top'
+   67 |   logic                wvalid;
+      |                        ^~~~~~
+%Warning-UNDRIVEN: /Users/james/Workspace/AES/src/axil_if.sv:65:24: Signal is not driven: 'wdata'
+                                                                  : ... note: In instance 'aes_top'
+   65 |   logic [DATA_W-1:0]   wdata;
+      |                        ^~~~~
+%Warning-UNDRIVEN: /Users/james/Workspace/AES/src/axil_if.sv:66:24: Signal is not driven: 'wstrb'
+                                                                  : ... note: In instance 'aes_top'
+   66 |   logic [DATA_W/8-1:0] wstrb;
+      |                        ^~~~~
+%Warning-UNDRIVEN: /Users/james/Workspace/AES/src/axil_if.sv:72:24: Signal is not driven: 'bready'
+                                                                  : ... note: In instance 'aes_top'
+   72 |   logic                bready;
+      |                        ^~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/axil_if.sv:71:24: Signal is not used: 'bvalid'
+                                                                      : ... note: In instance 'aes_top'
+   71 |   logic                bvalid;
+      |                        ^~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/axil_if.sv:70:24: Signal is not used: 'bresp'
+                                                                      : ... note: In instance 'aes_top'
+   70 |   logic [1:0]          bresp;
+      |                        ^~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/axil_if.sv:77:24: Signal is not used: 'arready'
+                                                                      : ... note: In instance 'aes_top'
+   77 |   logic                arready;
+      |                        ^~~~~~~
+%Warning-UNDRIVEN: /Users/james/Workspace/AES/src/axil_if.sv:76:24: Signal is not driven: 'arvalid'
+                                                                  : ... note: In instance 'aes_top'
+   76 |   logic                arvalid;
+      |                        ^~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/axil_if.sv:74:24: Bits of signal are not driven, nor used: 'araddr'[7]
+                                                                      : ... note: In instance 'aes_top'
+   74 |   logic [ADDR_W-1:0]   araddr;
+      |                        ^~~~~~
+%Warning-UNDRIVEN: /Users/james/Workspace/AES/src/axil_if.sv:74:24: Bits of signal are not driven: 'araddr'[6:0]
+                                                                  : ... note: In instance 'aes_top'
+   74 |   logic [ADDR_W-1:0]   araddr;
+      |                        ^~~~~~
+%Warning-UNDRIVEN: /Users/james/Workspace/AES/src/axil_if.sv:75:24: Signal is not driven: 'arprot'
+                                                                  : ... note: In instance 'aes_top'
+   75 |   logic [2:0]          arprot;
+      |                        ^~~~~~
+%Warning-UNDRIVEN: /Users/james/Workspace/AES/src/axil_if.sv:82:24: Signal is not driven: 'rready'
+                                                                  : ... note: In instance 'aes_top'
+   82 |   logic                rready;
+      |                        ^~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/axil_if.sv:81:24: Signal is not used: 'rvalid'
+                                                                      : ... note: In instance 'aes_top'
+   81 |   logic                rvalid;
+      |                        ^~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/axil_if.sv:79:24: Signal is not used: 'rdata'
+                                                                      : ... note: In instance 'aes_top'
+   79 |   logic [DATA_W-1:0]   rdata;
+      |                        ^~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/axil_if.sv:80:24: Signal is not used: 'rresp'
+                                                                      : ... note: In instance 'aes_top'
+   80 |   logic [1:0]          rresp;
+      |                        ^~~~~
+%Warning-UNUSEDPARAM: /Users/james/Workspace/AES/src/aes_pkg.sv:110:28: Parameter is not used: 'C_COUNT_W'
+                                                                      : ... note: In instance 'aes_top'
+  110 |     parameter int unsigned C_COUNT_W = 16;
+      |                            ^~~~~~~~~
+                      ... For warning description see https://verilator.org/warn/UNUSEDPARAM?v=5.039
+                      ... Use "/* verilator lint_off UNUSEDPARAM */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/aes_core.sv:103:26: Signal is not used: 'enable_i'
+                                                                        : ... note: In instance 'aes_top.u_core'
+  103 |     input  logic         enable_i,
+      |                          ^~~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/aes_core.sv:105:26: Signal is not used: 'mask_i'
+                                                                        : ... note: In instance 'aes_top.u_core'
+  105 |     input  logic         mask_i,
+      |                          ^~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/aes_core.sv:107:26: Signal is not used: 'clear_i'
+                                                                        : ... note: In instance 'aes_top.u_core'
+  107 |     input  logic         clear_i,
+      |                          ^~~~~~~
+%Warning-UNUSEDPARAM: /Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite_pkg.sv:13:16: Parameter is not used: 'AES_REGISTER_FILE_AXI_LITE_DATA_WIDTH'
+                                                                                                    : ... note: In instance 'aes_top.u_core'
+   13 |     localparam AES_REGISTER_FILE_AXI_LITE_DATA_WIDTH = 32;
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite_pkg.sv:15:16: Parameter is not used: 'AES_REGISTER_FILE_AXI_LITE_SIZE'
+                                                                                                    : ... note: In instance 'aes_top.u_core'
+   15 |     localparam AES_REGISTER_FILE_AXI_LITE_SIZE = 'h44;
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite.sv:18:26: Signal is not used: 's_axil_awprot'
+                                                                                                 : ... note: In instance 'aes_top.u_regs'
+   18 |         input wire [2:0] s_axil_awprot,
+      |                          ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite.sv:29:26: Signal is not used: 's_axil_arprot'
+                                                                                                 : ... note: In instance 'aes_top.u_regs'
+   29 |         input wire [2:0] s_axil_arprot,
+      |                          ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite.sv:61:17: Bits of signal are not used: 'axil_araddr'[1:0]
+                                                                                                 : ... note: In instance 'aes_top.u_regs'
+   61 |     logic [6:0] axil_araddr;
+      |                 ^~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite.sv:64:17: Bits of signal are not used: 'axil_awaddr'[1:0]
+                                                                                                 : ... note: In instance 'aes_top.u_regs'
+   64 |     logic [6:0] axil_awaddr;
+      |                 ^~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite.sv:253:44: Bits of signal are not used: 'decoded_reg_strb'[16:15,12,9]
+                                                                                                  : ... note: In instance 'aes_top.u_regs'
+  253 |     decoded_reg_strb_t decoded_reg_strb_c, decoded_reg_strb;
+      |                                            ^~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite.sv:254:11: Signal is not used: 'decoded_err'
+                                                                                                  : ... note: In instance 'aes_top.u_regs'
+  254 |     logic decoded_err;
+      |           ^~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite.sv:262:15: Signal is not used: 'is_valid_addr'
+                                                                                                  : ... note: In instance 'aes_top.u_regs'
+  262 |         logic is_valid_addr;
+      |               ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite.sv:263:15: Signal is not used: 'is_valid_rw'
+                                                                                                  : ... note: In instance 'aes_top.u_regs'
+  263 |         logic is_valid_rw;
+      |               ^~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/james/Workspace/AES/src/aes_round_engine.sv:105:23: Bits of signal are not used: 'r_all'[15:12]
+                                                                                : ... note: In instance 'aes_top.u_core.u_aes_cipher.u_engine'
+  105 |     logic [4*LAT+3:0] r_all;    
+      |                       ^~~~~
+- V e r i l a t i o n   R e p o r t: Verilator 5.039 devel rev v5.038-8-gd89df33fc
+- Verilator: Built from 0.926 MB sources in 14 modules, into 0.007 MB in 4 C++ files needing 0.000 MB
+- Verilator: Walltime 0.096 s (elab=0.021, cvt=0.037, bld=0.000); cpu 0.070 s on 1 threads

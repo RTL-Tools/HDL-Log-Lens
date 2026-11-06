@@ -1,0 +1,72 @@
+{
+  "name": "hdl-log-lens",
+  "displayName": "HDL Log Lens",
+  "description": "Shows warnings and errors from Verilator, NVC, Yosys and nextpnr logs in the Problems panel.",
+  "version": "0.0.1",
+  "publisher": "fpga-james",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Linters"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/src/extension.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "tsc -p . && node --test \"out/test/**/*.test.js\"",
+    "test:integration": "tsc -p . && node test/integration/run.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.6.0"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "hdlLogLens.clear",
+        "title": "HDL Log Lens: Clear HDL problems"
+      }
+    ],
+    "configuration": {
+      "title": "HDL Log Lens",
+      "properties": {
+        "hdlLogLens.logGlobs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "**/out/reports/**/*.log",
+            "**/*.rpt"
+          ],
+          "description": "Glob patterns of log/report files to parse."
+        },
+        "hdlLogLens.tool": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "verilator",
+            "yosys",
+            "nextpnr",
+            "nvc"
+          ],
+          "default": "auto",
+          "description": "Force one parser for every log instead of auto-detecting from file name and contents."
+        },
+        "hdlLogLens.suppressCodes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Message IDs to hide, e.g. UNUSEDSIGNAL."
+        }
+      }
+    }
+  }
+}
