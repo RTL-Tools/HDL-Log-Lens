@@ -1,0 +1,14 @@
+%Error: tb/native/sv/aes_tb.sv:29:43: Can't find definition of variable: 'aes_conf_addr'
+                                    : ... Suggested alternative: 'aes_control_addr'
+   29 |     localparam logic [7:0] CONF_ADDR    = aes_conf_addr;
+      |                                           ^~~~~~~~~~~~~
+        ... See the manual at https://verilator.org/verilator_doc.html?v=5.039 for more assistance.
+%Error: tb/native/sv/aes_tb.sv:30:43: Can't find definition of variable: 'aes_command_addr'
+                                    : ... Suggested alternative: 'aes_conf_addr'
+   30 |     localparam logic [7:0] COMMAND_ADDR = aes_command_addr;
+      |                                           ^~~~~~~~~~~~~~~~
+%Error-PINNOTFOUND: tb/native/sv/aes_tb.sv:62:36: Pin not found: 'pulse_i'
+   62 |         .clk(clk), .rst_n(rst_n), .pulse_i(pulse_i),
+      |                                    ^~~~~~~
+                    ... For error description see https://verilator.org/warn/PINNOTFOUND?v=5.039
+%Error: Exiting due to 3 error(s)

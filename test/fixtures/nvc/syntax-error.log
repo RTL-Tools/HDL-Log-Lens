@@ -1,0 +1,10 @@
+** Error: unexpected end while parsing signal assignment statement, expecting one of **, after, , or ;
+    > broken.vhd:15
+    |
+ 15 |     end if;
+    |     ^^^ this token was unexpected
+** Error: unexpected architecture while parsing if statement, expecting if
+    > broken.vhd:19
+    |
+ 19 | end architecture;
+    |     ^^^^^^^^^^^^ this token was unexpected
