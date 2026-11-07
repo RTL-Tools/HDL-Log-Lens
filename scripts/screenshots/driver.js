@@ -51,7 +51,7 @@ async function pageSocket() {
   const send = (method, params = {}) => new Promise((r) => { pending.set(++id, r); ws.send(JSON.stringify({ id, method, params })); });
   fs.mkdirSync(path.join(root, 'docs/images'), { recursive: true });
   try {
-    for (const name of ['log-lens-table', 'timing-table', 'inline-slack', 'waive-quick-fix']) {
+    for (const name of ['log-lens-table', 'timing-table', 'inline-slack', 'inline-problems', 'inline-both', 'waive-quick-fix']) {
       for (let i = 0; i < 600 && !fs.existsSync(path.join(shots, `${name}.ready`)); i++) await sleep(100);
       if (!fs.existsSync(path.join(shots, `${name}.ready`))) throw new Error(`step ${name} never became ready`);
       // Drop the title bar ("[Extension Development Host] ...") and scale down: full retina PNGs are ~700 KB each.

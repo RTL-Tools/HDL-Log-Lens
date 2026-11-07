@@ -5,6 +5,7 @@ import { parseLog } from './parse';
 import type { Row } from './model';
 import { resolvePath } from './resolve';
 import { registerInline } from './inlineView';
+import { registerInlineProblems } from './inlineProblemsView';
 import { registerTiming, type TimingPanel } from './timingView';
 import { ProblemsPanel } from './problemsView';
 import { registerWaiverUi, WaiverStore } from './waiverView';
@@ -26,7 +27,7 @@ const DEBOUNCE_MS = 200;
 
 type PerFile = Map<string, { uri: vscode.Uri; diags: vscode.Diagnostic[] }>;
 
-export function activate(ctx: vscode.ExtensionContext): { problems: ProblemsPanel; timing: TimingPanel; inline: ReturnType<typeof registerInline> } {
+export function activate(ctx: vscode.ExtensionContext): { problems: ProblemsPanel; timing: TimingPanel; inline: ReturnType<typeof registerInline>; inlineProblems: ReturnType<typeof registerInlineProblems> } {
   const collection = vscode.languages.createDiagnosticCollection('hdl-log-lens');
   const channel = vscode.window.createOutputChannel('HDL Log Lens');
   const log = (msg: string) => channel.appendLine(`${new Date().toISOString().slice(11, 23)} ${msg}`);
@@ -203,7 +204,8 @@ export function activate(ctx: vscode.ExtensionContext): { problems: ProblemsPane
   void waivers.load(log).then(scan); // waivers first, so the first scan already applies them
   const timing = registerTiming(ctx, log);
   const inline = registerInline(ctx, timing);
-  return { problems: panel, timing, inline }; // exposed for the Extension Host test
+  const inlineProblems = registerInlineProblems(ctx, panel);
+  return { problems: panel, timing, inline, inlineProblems }; // exposed for the Extension Host test
 }
 
 export function deactivate(): void {}

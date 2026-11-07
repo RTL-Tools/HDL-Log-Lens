@@ -6,6 +6,8 @@ import { rowIndex } from './tableHtml';
 
 export class ProblemsPanel implements vscode.WebviewViewProvider {
   rows: Row[] = []; // in the order the table was sent: the page's row index `i` points into this
+  private readonly rowsChanged = new vscode.EventEmitter<void>();
+  readonly onDidChangeRows = this.rowsChanged.event;
   resolved = false; // exposed for the Extension Host test
   private view?: vscode.WebviewView;
   private summary = '';
@@ -22,6 +24,7 @@ export class ProblemsPanel implements vscode.WebviewViewProvider {
     this.rows = sortRows(rows);
     this.summary = summary;
     this.render();
+    this.rowsChanged.fire();
   }
 
   private render(): void {

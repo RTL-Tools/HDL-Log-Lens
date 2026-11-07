@@ -15,7 +15,7 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 let step = '';
 async function check(): Promise<void> {
-  const api = (await vscode.extensions.getExtension('fpga-james.hdl-log-lens')!.activate()) as { problems: import('../../src/problemsView').ProblemsPanel; timing: import('../../src/timingView').TimingPanel; inline: { annotationsFor(d: vscode.TextDocument): { line: number; text: string; hover: string }[] } };
+  const api = (await vscode.extensions.getExtension('fpga-james.hdl-log-lens')!.activate()) as { problems: import('../../src/problemsView').ProblemsPanel; timing: import('../../src/timingView').TimingPanel; inline: { annotationsFor(d: vscode.TextDocument): { line: number; text: string; hover: string }[] }; inlineProblems: { notesFor(d: vscode.TextDocument): { line: number; text: string; severity: string }[] } };
   for (let i = 0; i < 100 && !['verilator', 'yosys', 'nextpnr', 'nvc'].every((t) => ours().some((x) => x.d.source === t)); i++) await sleep(300);
 
   const all = ours();
@@ -99,6 +99,22 @@ async function check(): Promise<void> {
   await vscode.commands.executeCommand('workbench.view.extension.hdlLogLensTiming');
   for (let i = 0; i < 50 && !api.timing.resolved; i++) await sleep(100);
   assert.ok(api.timing.resolved, 'timing webview resolved when its tab opened');
+
+  // Inline problem messages: axil_if.sv line 63 (0-based 62) has the UNUSEDSIGNAL warning for 'awready'.
+  const axil = await vscode.workspace.openTextDocument(vscode.Uri.file(`${vscode.workspace.workspaceFolders![0].uri.fsPath}/src/axil_if.sv`));
+  const notes = api.inlineProblems.notesFor(axil);
+  const n63 = notes.find((n) => n.line === 62);
+  assert.ok(n63, 'line 63 has an inline problem note');
+  assert.match(n63.text, /^UNUSEDSIGNAL: Signal is not used: 'awready'/);
+  assert.equal(n63.severity, 'warning');
+  assert.equal(new Set(notes.map((n) => n.line)).size, notes.length, 'one note per line');
+  assert.ok(notes.every((n) => n.text.length <= 120 + ' (+999 more)'.length), 'notes are truncated');
+  const logDoc = await vscode.workspace.openTextDocument(vscode.Uri.file(`${vscode.workspace.workspaceFolders![0].uri.fsPath}/out/reports/yosys/nextpnr.log`));
+  assert.deepEqual(api.inlineProblems.notesFor(logDoc), [], 'location-less problems (on a log file) get no inline note');
+  await vscode.workspace.getConfiguration('hdlLogLens').update('inlineProblems', false, vscode.ConfigurationTarget.Global);
+  assert.deepEqual(api.inlineProblems.notesFor(axil), [], 'toggle off hides inline problems');
+  await vscode.workspace.getConfiguration('hdlLogLens').update('inlineProblems', undefined, vscode.ConfigurationTarget.Global);
+  assert.ok(api.inlineProblems.notesFor(axil).length > 0, 'and back on');
 
   // Waivers: quick fix + sidebar node both waive; the file is written, messages disappear, removing the entry restores them.
   const waiverPath = `${os.tmpdir().length > 40 ? '/tmp' : os.tmpdir()}/lens-waive-${process.pid}.json`;

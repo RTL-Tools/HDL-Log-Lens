@@ -41,6 +41,12 @@ exports.run = async function run() {
     await cmd('workbench.action.closePanel');
     await open('src/aes_cipher.sv', 199);
   });
+  await step('inline-problems', async () => {
+    await open('src/axil_if.sv', 66);
+  });
+  await step('inline-both', async () => {
+    await open('synth/aes_impl_top.sv', 212); // a line with both a problem message and a timing note
+  });
   await step('waive-quick-fix', async () => {
     await open('src/axil_if.sv', 63);
     await cmd('editor.action.quickFix');

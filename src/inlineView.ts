@@ -1,12 +1,13 @@
 import * as vscode from 'vscode';
 import { inlineAnnotations, type Annotation } from './inline';
+import { BLAME_COLOR, BLAME_MARGIN } from './inlineProblemsView';
 import type { TimingPanel } from './timingView';
 
 export function registerInline(ctx: vscode.ExtensionContext, panel: TimingPanel) {
   const cfg = () => vscode.workspace.getConfiguration('hdlLogLens');
   const enabled = () => cfg().get<boolean>('inlineTiming', true);
   const type = vscode.window.createTextEditorDecorationType({
-    after: { margin: '0 0 0 2em', color: new vscode.ThemeColor('editorCodeLens.foreground') },
+    after: { color: new vscode.ThemeColor(BLAME_COLOR) },
   });
   // Same function feeds the decorations and the Extension Host test.
   const annotationsFor = (doc: vscode.TextDocument): Annotation[] => (enabled() ? inlineAnnotations(panel.rows, doc.uri.fsPath) : []);
@@ -17,7 +18,7 @@ export function registerInline(ctx: vscode.ExtensionContext, panel: TimingPanel)
       .map((a) => ({
         range: ed.document.lineAt(a.line).range,
         hoverMessage: new vscode.MarkdownString().appendText(a.hover),
-        renderOptions: { after: { contentText: a.text, color: a.negative ? new vscode.ThemeColor('errorForeground') : undefined } },
+        renderOptions: { after: { contentText: a.text, margin: BLAME_MARGIN, color: a.negative ? new vscode.ThemeColor('errorForeground') : undefined } },
       })));
   const applyAll = () => vscode.window.visibleTextEditors.forEach(apply);
 

@@ -47,6 +47,10 @@
       {
         "command": "hdlLogLens.openWaivers",
         "title": "HDL Log Lens: Open waiver file"
+      },
+      {
+        "command": "hdlLogLens.toggleInlineProblems",
+        "title": "HDL Log Lens: Toggle inline problem messages"
       }
     ],
     "configuration": {
@@ -108,6 +112,11 @@
           "type": "string",
           "default": "hdl-log-lens.waivers.json",
           "description": "Waiver file, relative to the first workspace folder (or absolute). JSON: {\"waivers\":[{\"tool\":\"verilator\",\"code\":\"UNUSEDSIGNAL\",\"file\":\"src/a.sv\",\"message\":\"...\",\"reason\":\"...\"}]}. A waiver hides every message that matches all the fields it lists."
+        },
+        "hdlLogLens.inlineProblems": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show each line's worst problem message at the end of the line in the editor (like Error Lens). Messages attached to a log file rather than a source line are not shown."
         }
       }
     },
