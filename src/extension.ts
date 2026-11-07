@@ -2,11 +2,13 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as vscode from 'vscode';
 import { parseLog } from './parse';
-import type { GroupBy, Row } from './model';
+import type { Row } from './model';
 import { resolvePath } from './resolve';
 import { registerInline } from './inlineView';
 import { registerTiming, type TimingPanel } from './timingView';
-import { ProblemsTree } from './tree';
+import { ProblemsPanel } from './problemsView';
+import { registerWaiverUi, WaiverStore } from './waiverView';
+import { waiverFileKey, type WaiverTarget } from './waivers';
 import type { Severity, Tool } from './types';
 
 const SEVERITY: Record<Severity, vscode.DiagnosticSeverity> = {
@@ -14,7 +16,6 @@ const SEVERITY: Record<Severity, vscode.DiagnosticSeverity> = {
   warning: vscode.DiagnosticSeverity.Warning,
   info: vscode.DiagnosticSeverity.Information,
 };
-const GROUP_BYS: GroupBy[] = ['tool', 'log', 'file', 'severity', 'code'];
 const sevOf = (s: vscode.DiagnosticSeverity): Severity =>
   s === vscode.DiagnosticSeverity.Error ? 'error' : s === vscode.DiagnosticSeverity.Warning ? 'warning' : 'info';
 const SOURCE_GLOB = '**/*.{v,vh,sv,svh,vhd,vhdl}';
@@ -25,7 +26,7 @@ const DEBOUNCE_MS = 200;
 
 type PerFile = Map<string, { uri: vscode.Uri; diags: vscode.Diagnostic[] }>;
 
-export function activate(ctx: vscode.ExtensionContext): { tree: ProblemsTree; timing: TimingPanel; inline: ReturnType<typeof registerInline> } {
+export function activate(ctx: vscode.ExtensionContext): { problems: ProblemsPanel; timing: TimingPanel; inline: ReturnType<typeof registerInline> } {
   const collection = vscode.languages.createDiagnosticCollection('hdl-log-lens');
   const channel = vscode.window.createOutputChannel('HDL Log Lens');
   const log = (msg: string) => channel.appendLine(`${new Date().toISOString().slice(11, 23)} ${msg}`);
@@ -37,32 +38,44 @@ export function activate(ctx: vscode.ExtensionContext): { tree: ProblemsTree; ti
 
   const cfg = () => vscode.workspace.getConfiguration('hdlLogLens');
 
-  const groupBy = () => cfg().get<GroupBy>('groupBy', 'tool');
-  // Sidebar rows come straight from the diagnostics already held per log.
+  const waivers = new WaiverStore();
+  const targetOf = new WeakMap<vscode.Diagnostic, WaiverTarget>();
+  const byKey = new Map<string, WaiverTarget>(); // the quick-fix provider gets fresh Diagnostic copies, so match by content
+  const diagKey = (uri: vscode.Uri, d: vscode.Diagnostic) => {
+    const code = typeof d.code === 'object' ? d.code.value : d.code;
+    return `${uri}|${d.range.start.line}:${d.range.start.character}|${d.source}|${code ?? ''}|${d.message}`;
+  };
+  let waivedByLog = new Map<string, number>();
+
+  // Table rows come straight from the diagnostics already held per log.
   const rows = (): Row[] =>
     [...perLog].flatMap(([logPath, files]) =>
       [...files.values()].flatMap(({ uri, diags }) =>
         diags.map((d) => ({
           tool: d.source ?? '', logPath, filePath: uri.fsPath, line: d.range.start.line, col: d.range.start.character,
-          severity: sevOf(d.severity), code: d.code === undefined ? undefined : String(d.code), message: d.message,
+          severity: sevOf(d.severity), code: d.code === undefined ? undefined : String(d.code), message: d.message, target: targetOf.get(d),
         }))));
-  const tree = new ProblemsTree(rows, groupBy);
-  const view = vscode.window.createTreeView('hdlLogLens.problems', { treeDataProvider: tree });
-  const describe = () => { view.description = `by ${groupBy()}`; };
-  describe();
+  const panel = new ProblemsPanel();
+  const summary = () => {
+    const waived = [...waivedByLog.values()].reduce((a, b) => a + b, 0);
+    const n = rows().length;
+    return `${n} problem${n === 1 ? '' : 's'}${waived ? ` · ${waived} waived` : ''}`;
+  };
 
   const rebuild = () => {
-    tree.refresh();
+    byKey.clear();
     collection.clear();
     const merged = new Map<string, { uri: vscode.Uri; diags: vscode.Diagnostic[] }>();
     for (const files of perLog.values()) {
       for (const [key, v] of files) {
         const m = merged.get(key) ?? { uri: v.uri, diags: [] };
         m.diags.push(...v.diags);
+        for (const d of v.diags) byKey.set(diagKey(v.uri, d), targetOf.get(d)!);
         merged.set(key, m);
       }
     }
     for (const { uri, diags } of merged.values()) collection.set(uri, diags);
+    panel.update(rows(), summary());
   };
 
   const ensureIndex = async () => {
@@ -77,6 +90,7 @@ export function activate(ctx: vscode.ExtensionContext): { tree: ProblemsTree; ti
   };
 
   const deleteLog = (uri: vscode.Uri) => {
+    waivedByLog.delete(uri.fsPath);
     if (perLog.delete(uri.fsPath)) {
       log(`dropped ${uri.fsPath}`);
       rebuild();
@@ -103,6 +117,7 @@ export function activate(ctx: vscode.ExtensionContext): { tree: ProblemsTree; ti
     const files: PerFile = new Map();
     let suppressed = 0;
     let unresolved = 0;
+    let waived = 0;
     for (const f of parsed.findings) {
       if (f.code && suppress.has(f.code)) {
         suppressed++;
@@ -110,6 +125,12 @@ export function activate(ctx: vscode.ExtensionContext): { tree: ProblemsTree; ti
       }
       const resolved = f.file ? resolvePath(f.file, logDir, roots, (n) => index.get(n) ?? []) : undefined;
       if (f.file && !resolved) unresolved++;
+      // Waivers key on the workspace-relative file shown, not the line (lines drift).
+      const wt: WaiverTarget = { tool: parsed.tool, code: f.code, file: waiverFileKey(resolved ?? f.file ?? uri.fsPath, roots), message: f.message };
+      if (waivers.isWaived(wt)) {
+        waived++;
+        continue;
+      }
       const target = resolved ? vscode.Uri.file(resolved) : uri;
       const range = resolved
         ? new vscode.Range(f.line - 1, f.col - 1, (f.endLine ?? f.line) - 1, (f.endCol ?? f.col) - 1)
@@ -119,13 +140,15 @@ export function activate(ctx: vscode.ExtensionContext): { tree: ProblemsTree; ti
       const d = new vscode.Diagnostic(range, message, SEVERITY[f.severity]);
       d.source = parsed.tool;
       d.code = f.code;
+      targetOf.set(d, wt);
       const entry = files.get(target.toString()) ?? { uri: target, diags: [] };
       entry.diags.push(d);
       files.set(target.toString(), entry);
     }
     perLog.set(uri.fsPath, files);
+    waivedByLog.set(uri.fsPath, waived);
     const total = [...files.values()].reduce((n, v) => n + v.diags.length, 0);
-    log(`${parsed.tool}: ${uri.fsPath} -> ${total} problems (${suppressed} suppressed, ${unresolved} source files not found)`);
+    log(`${parsed.tool}: ${uri.fsPath} -> ${total} problems (${suppressed} suppressed, ${waived} waived, ${unresolved} source files not found)`);
     rebuild();
   };
 
@@ -140,7 +163,10 @@ export function activate(ctx: vscode.ExtensionContext): { tree: ProblemsTree; ti
     for (const glob of cfg().get<string[]>('logGlobs', [])) {
       for (const u of await vscode.workspace.findFiles(glob, EXCLUDE_LOGS)) found.set(u.fsPath, u);
     }
-    for (const p of [...perLog.keys()]) if (!found.has(p)) perLog.delete(p);
+    for (const p of [...perLog.keys()]) if (!found.has(p)) {
+      perLog.delete(p);
+      waivedByLog.delete(p);
+    }
     const folders = (vscode.workspace.workspaceFolders ?? []).map((f) => f.uri.fsPath).join(', ') || '(no folder open)';
     log(`scan: ${found.size} log(s) match ${JSON.stringify(cfg().get('logGlobs'))} in ${folders}`);
     await Promise.all([...found.values()].map(refreshLog));
@@ -158,21 +184,13 @@ export function activate(ctx: vscode.ExtensionContext): { tree: ProblemsTree; ti
   ctx.subscriptions.push(
     collection,
     channel,
-    view,
+    vscode.window.registerWebviewViewProvider('hdlLogLens.problems', panel),
     vscode.commands.registerCommand('hdlLogLens.clear', () => {
       log('clear command');
       perLog.clear();
       rebuild();
     }),
-    vscode.commands.registerCommand('hdlLogLens.groupBy', async () => {
-      const pick = await vscode.window.showQuickPick(GROUP_BYS, { placeHolder: `Group problems by (now: ${groupBy()})` });
-      if (pick) await cfg().update('groupBy', pick, vscode.ConfigurationTarget.Global);
-    }),
     vscode.workspace.onDidChangeConfiguration((e) => {
-      if (e.affectsConfiguration('hdlLogLens.groupBy')) {
-        describe();
-        tree.refresh();
-      }
       if (['logGlobs', 'tool', 'suppressCodes'].some((k) => e.affectsConfiguration(`hdlLogLens.${k}`))) {
         watch();
         void scan();
@@ -181,10 +199,11 @@ export function activate(ctx: vscode.ExtensionContext): { tree: ProblemsTree; ti
     { dispose: () => { watchers.forEach((w) => w.dispose()); timers.forEach(clearTimeout); } },
   );
   watch();
-  void scan();
+  registerWaiverUi(ctx, waivers, log, (uri, d) => byKey.get(diagKey(uri, d)), (i) => panel.rows[i]?.target, () => void scan());
+  void waivers.load(log).then(scan); // waivers first, so the first scan already applies them
   const timing = registerTiming(ctx, log);
   const inline = registerInline(ctx, timing);
-  return { tree, timing, inline }; // exposed for the Extension Host test
+  return { problems: panel, timing, inline }; // exposed for the Extension Host test
 }
 
 export function deactivate(): void {}

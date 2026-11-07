@@ -3,6 +3,7 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as vscode from 'vscode';
 import { lineRows, netlistSrcLookup, parseTiming, type LineRow, type TimingReport } from './timing';
+import { rowIndex } from './tableHtml';
 import { renderTimingHtml } from './timingHtml';
 
 const EXCLUDE = '**/{node_modules,.venv,.bender,.git}/**';
@@ -33,13 +34,12 @@ export class TimingPanel implements vscode.WebviewViewProvider {
     if (this.view) this.view.webview.html = renderTimingHtml(this.rows, randomBytes(16).toString('hex'), this.view.webview.cspSource);
   }
 
-  // The page only sends a row index; the file to open comes from our own rows, never from the page.
   handleMessage(msg: unknown): void {
-    const i = (msg as { type?: unknown; i?: unknown } | null)?.type === 'open' ? (msg as { i: unknown }).i : undefined;
-    const row = typeof i === 'number' && Number.isInteger(i) ? this.rows[i] : undefined;
-    if (!row) return;
-    const p = new vscode.Position(row.src.line - 1, row.src.col - 1);
-    void vscode.commands.executeCommand('vscode.open', vscode.Uri.file(row.src.file), { selection: new vscode.Range(p, p) });
+    const i = rowIndex(msg, this.rows.length);
+    if (i === undefined) return;
+    const { src } = this.rows[i];
+    const p = new vscode.Position(src.line - 1, src.col - 1);
+    void vscode.commands.executeCommand('vscode.open', vscode.Uri.file(src.file), { selection: new vscode.Range(p, p) });
   }
 }
 

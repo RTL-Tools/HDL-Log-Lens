@@ -41,6 +41,7 @@ test('CSP allows only the nonce script; empty state explains itself', () => {
 
 test('line without slack or endpoints shows empty cells, not NaN/undefined', () => {
   const h = html([row({ slackNs: undefined, endpoints: 0 })]);
-  assert.ok(!h.includes('NaN') && !h.includes('undefined'));
+  const body = h.slice(h.indexOf('<tbody>'), h.indexOf('</tbody>'));
+  assert.ok(!body.includes('NaN') && !body.includes('undefined'), 'no undefined/NaN in cells');
   assert.match(h, /data-v="1e9"><\/td>/);
 });

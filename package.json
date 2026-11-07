@@ -28,11 +28,6 @@
   "contributes": {
     "commands": [
       {
-        "command": "hdlLogLens.groupBy",
-        "title": "HDL Log Lens: Group problems by\u2026",
-        "icon": "$(list-tree)"
-      },
-      {
         "command": "hdlLogLens.clear",
         "title": "HDL Log Lens: Clear HDL problems",
         "icon": "$(clear-all)"
@@ -40,6 +35,18 @@
       {
         "command": "hdlLogLens.toggleInlineTiming",
         "title": "HDL Log Lens: Toggle inline timing"
+      },
+      {
+        "command": "hdlLogLens.waiveMessage",
+        "title": "Waive this message"
+      },
+      {
+        "command": "hdlLogLens.waiveType",
+        "title": "Waive all messages of this type"
+      },
+      {
+        "command": "hdlLogLens.openWaivers",
+        "title": "HDL Log Lens: Open waiver file"
       }
     ],
     "configuration": {
@@ -76,18 +83,6 @@
           "default": [],
           "description": "Message IDs to hide, e.g. UNUSEDSIGNAL."
         },
-        "hdlLogLens.groupBy": {
-          "type": "string",
-          "enum": [
-            "tool",
-            "log",
-            "file",
-            "severity",
-            "code"
-          ],
-          "default": "tool",
-          "description": "How the HDL Log Lens sidebar groups problems."
-        },
         "hdlLogLens.timingGlobs": {
           "type": "array",
           "items": {
@@ -108,18 +103,21 @@
           "minimum": 0,
           "default": 200,
           "description": "How many source lines the Timing table lists, worst slack first. Each line shows the worst path or register input through it; only lines that trace to a source file appear."
+        },
+        "hdlLogLens.waiverFile": {
+          "type": "string",
+          "default": "hdl-log-lens.waivers.json",
+          "description": "Waiver file, relative to the first workspace folder (or absolute). JSON: {\"waivers\":[{\"tool\":\"verilator\",\"code\":\"UNUSEDSIGNAL\",\"file\":\"src/a.sv\",\"message\":\"...\",\"reason\":\"...\"}]}. A waiver hides every message that matches all the fields it lists."
         }
       }
     },
     "viewsContainers": {
-      "activitybar": [
-        {
-          "id": "hdlLogLens",
-          "title": "HDL Log Lens",
-          "icon": "media/icon.svg"
-        }
-      ],
       "panel": [
+        {
+          "id": "hdlLogLensProblems",
+          "title": "Log Lens",
+          "icon": "media/icon.svg"
+        },
         {
           "id": "hdlLogLensTiming",
           "title": "Timing",
@@ -128,10 +126,11 @@
       ]
     },
     "views": {
-      "hdlLogLens": [
+      "hdlLogLensProblems": [
         {
           "id": "hdlLogLens.problems",
-          "name": "Problems"
+          "name": "Log Lens",
+          "type": "webview"
         }
       ],
       "hdlLogLensTiming": [
@@ -143,16 +142,26 @@
       ]
     },
     "menus": {
-      "view/title": [
+      "webview/context": [
         {
-          "command": "hdlLogLens.groupBy",
-          "when": "view == hdlLogLens.problems",
-          "group": "navigation@1"
+          "command": "hdlLogLens.waiveMessage",
+          "when": "webviewId == 'hdlLogLens.problems' && webviewSection == 'row'",
+          "group": "waive@1"
         },
         {
-          "command": "hdlLogLens.clear",
-          "when": "view == hdlLogLens.problems",
-          "group": "navigation@2"
+          "command": "hdlLogLens.waiveType",
+          "when": "webviewId == 'hdlLogLens.problems' && webviewSection == 'row'",
+          "group": "waive@2"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "hdlLogLens.waiveMessage",
+          "when": "false"
+        },
+        {
+          "command": "hdlLogLens.waiveType",
+          "when": "false"
         }
       ]
     }
