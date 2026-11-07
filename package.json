@@ -2,6 +2,7 @@
   "name": "hdl-log-lens",
   "displayName": "HDL Log Lens",
   "description": "Shows warnings and errors from Verilator, NVC, Yosys and nextpnr logs in the Problems panel.",
+  "icon": "media/logo.png",
   "version": "0.0.1",
   "publisher": "fpga-james",
   "license": "MIT",
