@@ -29,7 +29,28 @@
     "commands": [
       {
         "command": "hdlLogLens.clear",
-        "title": "HDL Log Lens: Clear HDL problems"
+        "title": "HDL Log Lens: Clear HDL problems",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "hdlLogLens.toggleInlineTiming",
+        "title": "HDL Log Lens: Toggle inline timing"
+      },
+      {
+        "command": "hdlLogLens.waiveMessage",
+        "title": "Waive this message"
+      },
+      {
+        "command": "hdlLogLens.waiveType",
+        "title": "Waive all messages of this type"
+      },
+      {
+        "command": "hdlLogLens.openWaivers",
+        "title": "HDL Log Lens: Open waiver file"
+      },
+      {
+        "command": "hdlLogLens.toggleInlineProblems",
+        "title": "HDL Log Lens: Toggle inline problem messages"
       }
     ],
     "configuration": {
@@ -65,8 +86,97 @@
           },
           "default": [],
           "description": "Message IDs to hide, e.g. UNUSEDSIGNAL."
+        },
+        "hdlLogLens.timingGlobs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "**/out/reports/**/*_timing.json"
+          ],
+          "description": "Glob patterns of nextpnr timing reports (--report JSON) for the Timing view. A sibling <name>_routed.json, when present, maps delay to source lines."
+        },
+        "hdlLogLens.inlineTiming": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show each timing-critical line's delay and slack at the end of the line in the editor."
+        },
+        "hdlLogLens.worstLines": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 200,
+          "description": "How many source lines the Timing table lists, worst slack first. Each line shows the worst path or register input through it; only lines that trace to a source file appear."
+        },
+        "hdlLogLens.waiverFile": {
+          "type": "string",
+          "default": "hdl-log-lens.waivers.json",
+          "description": "Waiver file, relative to the first workspace folder (or absolute). JSON: {\"waivers\":[{\"tool\":\"verilator\",\"code\":\"UNUSEDSIGNAL\",\"file\":\"src/a.sv\",\"message\":\"...\",\"reason\":\"...\"}]}. A waiver hides every message that matches all the fields it lists."
+        },
+        "hdlLogLens.inlineProblems": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show each line's worst problem message at the end of the line in the editor (like Error Lens). Messages attached to a log file rather than a source line are not shown."
         }
       }
+    },
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "hdlLogLensProblems",
+          "title": "Log Lens",
+          "icon": "media/icon.svg"
+        },
+        {
+          "id": "hdlLogLensTiming",
+          "title": "Timing",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "hdlLogLensProblems": [
+        {
+          "id": "hdlLogLens.problems",
+          "name": "Log Lens",
+          "type": "webview"
+        }
+      ],
+      "hdlLogLensTiming": [
+        {
+          "id": "hdlLogLens.timing",
+          "name": "Timing",
+          "type": "webview"
+        }
+      ]
+    },
+    "menus": {
+      "webview/context": [
+        {
+          "command": "hdlLogLens.waiveMessage",
+          "when": "webviewId == 'hdlLogLens.problems' && webviewSection == 'row'",
+          "group": "waive@1"
+        },
+        {
+          "command": "hdlLogLens.waiveType",
+          "when": "webviewId == 'hdlLogLens.problems' && webviewSection == 'row'",
+          "group": "waive@2"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "hdlLogLens.waiveMessage",
+          "when": "false"
+        },
+        {
+          "command": "hdlLogLens.waiveType",
+          "when": "false"
+        }
+      ]
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RTL-Tools/HDL-Log-Lens.git"
   }
 }

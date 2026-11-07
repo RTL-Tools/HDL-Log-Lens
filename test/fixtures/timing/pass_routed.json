@@ -1,0 +1,1171 @@
+{
+ "modules": {
+  "top": {
+   "attributes": {
+    "top": "1"
+   },
+   "cells": {
+    "ct_exp_q_TRELLIS_FF_Q_4": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:84.168-84.227"
+     }
+    },
+    "mis_q_TRELLIS_FF_Q_9": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_78": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_79": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_74": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_75": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_76": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_77": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_70": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_71": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_72": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_73": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "mis_q_TRELLIS_FF_Q_7": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_2": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_3": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_4": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_5": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_6": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_7": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_8": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_9": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "ct_exp_TRELLIS_FF_Q": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_96": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_97": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_94": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_95": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_92": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_93": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_90": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_91": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[6].u_sbox.d0_o_LUT4_A_7_Z_LUT4_D": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:128.32-129.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[0].u_sbox.d0_o_LUT4_B_5_Z_LUT4_D": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:128.32-129.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ks_mem.0.20_DO_1_LUT4_C": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:119.33-120.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[7].u_sbox.d0_o_LUT4_A_6_Z_LUT4_D": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:128.32-129.56"
+     }
+    },
+    "done_o$tr_io": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:271.19-271.25"
+     }
+    },
+    "out_cnt_q_TRELLIS_FF_Q": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_98": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_99": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "done_q_TRELLIS_FF_Q": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_18": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ks_pop_LUT4_D": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:119.33-120.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_19": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_17": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_16": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_15": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_14": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_13": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_12": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_11": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_10": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "ct_exp_q_TRELLIS_FF_Q_3": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_69": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_68": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "ct_exp_q_TRELLIS_FF_Q_7": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "ct_exp_q_TRELLIS_FF_Q_6": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:84.168-84.227"
+     }
+    },
+    "ct_exp_q_TRELLIS_FF_Q_5": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:84.168-84.227"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[5].u_sbox.d0_o_TRELLIS_FF_Q_2": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_sbox_bram.sv:154.13-157.16|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:16.100-16.154"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_63": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_62": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_61": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_60": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_67": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_66": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_65": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_64": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "mis_LUT4_Z_3": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:128.32-129.56"
+     }
+    },
+    "ct_exp_q_TRELLIS_FF_Q_9": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "ct_exp_q_TRELLIS_FF_Q_8": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_last_q_TRELLIS_FF_Q": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_85": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_84": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_87": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_86": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_81": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_80": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_83": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_82": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "take_LUT4_Z": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:119.33-120.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_89": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_88": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[5].u_sbox.g_out_reg.u_ram": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_sbox_bram.sv:115.11-141.80"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[3].u_sbox.g_out_reg.u_ram": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_sbox_bram.sv:115.11-141.80"
+     }
+    },
+    "u_aes_top.u_regs.axil_n_in_flight_TRELLIS_FF_Q": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite.sv:72.5-117.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_31": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_round_engine.sv:173.5-189.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:16.100-16.154"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.rk_mem.0.2$RAMW_SLICE": {
+     "attributes": {
+      "src": ""
+     }
+    },
+    "u_aes_top.u_regs.axil_n_in_flight_TRELLIS_FF_Q_1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite.sv:72.5-117.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.rk_mem.0.2$DPRAM_COMB0": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/lutrams_map.v:20.3-28.2"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.state_q_LUT4_D_30": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:124.33-125.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_38": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_39": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[0].u_sbox.d0_o_LUT4_A_Z_PFUMX_C0_BLUT_LUT4_Z": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:134.39-135.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[2].u_sbox.d0_o_LUT4_C_Z_PFUMX_C0_BLUT_LUT4_Z": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:134.39-135.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_28": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_round_engine.sv:173.5-189.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:16.100-16.154"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_30": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_31": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_32": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_33": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_34": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_35": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_36": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_37": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_20": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_round_engine.sv:173.5-189.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:16.100-16.154"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_22": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_round_engine.sv:173.5-189.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:16.100-16.154"
+     }
+    },
+    "rst_n_i$tr_io": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:64.18-64.25"
+     }
+    },
+    "u_aes_top.u_core.key_r_TRELLIS_FF_Q_29": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_core.sv:181.5-191.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_11": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_10": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "mis_PFUMX_Z_3_BLUT_LUT4_Z": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:134.39-135.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_54": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_round_engine.sv:173.5-189.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:16.100-16.154"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "ct_exp_q_TRELLIS_FF_Q": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_regs.field_storage_TRELLIS_FF_Q_29": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite.sv:614.5-622.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_113": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_103": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_112": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_102": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_111": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_101": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_regs.axil_n_in_flight_TRELLIS_FF_Q_CE_LUT4_Z": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:119.33-120.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[2].u_sbox.d1_o_LUT4_B_3_Z_LUT4_D": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:128.32-129.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_110": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_100": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "rst_sync_q_TRELLIS_FF_Q": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:122.5-122.71|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:16.100-16.154"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_117": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_107": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_116": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_106": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ks_mem.0.18_DO_2_LUT4_C": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:119.33-120.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_115": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_105": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_104": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.state_q_TRELLIS_FF_Q_2": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:16.100-16.154"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_27": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_26": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_25": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_24": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_23": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_22": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_21": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_20": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_114": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_round_engine.sv:173.5-189.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:16.100-16.154"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_key_schedule.u_sbox_hi.d1_o_LUT4_C_Z_LUT4_Z_26": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:124.33-125.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_110": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_round_engine.sv:173.5-189.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:16.100-16.154"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_29": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_28": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "pass_o_LUT4_Z": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:119.33-120.56"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB0": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_119": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_118": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_109": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_108": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_123": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_122": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_121": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_120": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_127": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_126": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_125": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_124": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_52": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_53": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_50": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_51": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_56": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_57": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_54": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_55": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_114": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "chk_q_TRELLIS_FF_Q": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:68.164-68.215"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_58": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_59": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "ct_exp_q_TRELLIS_FF_Q_13": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:84.168-84.227"
+     }
+    },
+    "ct_exp_q_TRELLIS_FF_Q_12": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "ct_exp_q_TRELLIS_FF_Q_11": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:84.168-84.227"
+     }
+    },
+    "ct_exp_q_TRELLIS_FF_Q_10": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:84.168-84.227"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_64": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_round_engine.sv:173.5-189.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:16.100-16.154"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_key_schedule.rk_q_TRELLIS_FF_Q_39": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_key_schedule.sv:112.5-159.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_41": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_40": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_43": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_42": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_45": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_44": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_47": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_46": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_49": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_48": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[1].u_sbox.d1_o_LUT4_A_Z_LUT4_D_Z_LUT4_Z_24": {
+     "attributes": {
+      "src": "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:128.32-129.56"
+     }
+    },
+    "ct_exp_q_TRELLIS_FF_Q_2": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:84.168-84.227"
+     }
+    },
+    "ct_exp_q_TRELLIS_FF_Q_1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:289.5-311.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_5": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_4": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_7": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_6": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_1": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "pass_o$tr_io": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/synth/aes_impl_top.sv:66.18-66.24"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_3": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_2": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_9": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    },
+    "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_8": {
+     "attributes": {
+      "src": "/Users/james/Workspace/AES/src/aes_cipher.sv:199.5-261.8|/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:56.101-56.163"
+     }
+    }
+   }
+  }
+ }
+}
