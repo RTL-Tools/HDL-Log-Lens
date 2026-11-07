@@ -1,3 +1,5 @@
+<p align="center"><img src="media/logo.png" alt="HDL Log Lens logo: a magnifying glass over a digital waveform" width="128"></p>
+
 # HDL-Log-Lens
 
 Turn HDL tool logs into clickable VS Code problems — NVC, Verilator, Yosys, nextpnr, Vivado, Questa.
