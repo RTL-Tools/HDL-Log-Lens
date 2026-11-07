@@ -28,8 +28,18 @@
   "contributes": {
     "commands": [
       {
+        "command": "hdlLogLens.groupBy",
+        "title": "HDL Log Lens: Group problems by\u2026",
+        "icon": "$(list-tree)"
+      },
+      {
         "command": "hdlLogLens.clear",
-        "title": "HDL Log Lens: Clear HDL problems"
+        "title": "HDL Log Lens: Clear HDL problems",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "hdlLogLens.toggleInlineTiming",
+        "title": "HDL Log Lens: Toggle inline timing"
       }
     ],
     "configuration": {
@@ -65,8 +75,90 @@
           },
           "default": [],
           "description": "Message IDs to hide, e.g. UNUSEDSIGNAL."
+        },
+        "hdlLogLens.groupBy": {
+          "type": "string",
+          "enum": [
+            "tool",
+            "log",
+            "file",
+            "severity",
+            "code"
+          ],
+          "default": "tool",
+          "description": "How the HDL Log Lens sidebar groups problems."
+        },
+        "hdlLogLens.timingGlobs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "**/out/reports/**/*_timing.json"
+          ],
+          "description": "Glob patterns of nextpnr timing reports (--report JSON) for the Timing view. A sibling <name>_routed.json, when present, maps delay to source lines."
+        },
+        "hdlLogLens.inlineTiming": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show each timing-critical line's delay and slack at the end of the line in the editor."
+        },
+        "hdlLogLens.worstLines": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 200,
+          "description": "How many source lines the Timing table lists, worst slack first. Each line shows the worst path or register input through it; only lines that trace to a source file appear."
         }
       }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "hdlLogLens",
+          "title": "HDL Log Lens",
+          "icon": "media/icon.svg"
+        }
+      ],
+      "panel": [
+        {
+          "id": "hdlLogLensTiming",
+          "title": "Timing",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "hdlLogLens": [
+        {
+          "id": "hdlLogLens.problems",
+          "name": "Problems"
+        }
+      ],
+      "hdlLogLensTiming": [
+        {
+          "id": "hdlLogLens.timing",
+          "name": "Timing",
+          "type": "webview"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "hdlLogLens.groupBy",
+          "when": "view == hdlLogLens.problems",
+          "group": "navigation@1"
+        },
+        {
+          "command": "hdlLogLens.clear",
+          "when": "view == hdlLogLens.problems",
+          "group": "navigation@2"
+        }
+      ]
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RTL-Tools/HDL-Log-Lens.git"
   }
 }

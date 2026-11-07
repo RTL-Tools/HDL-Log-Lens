@@ -1,0 +1,1807 @@
+{
+ "critical_paths": [
+  {
+   "from": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "path": [
+    {
+     "delay": 0.5249999761581421,
+     "from": {
+      "cell": "u_aes_top.u_core.iv_r_TRELLIS_FF_Q_127",
+      "loc": [
+       52,
+       4
+      ],
+      "port": "Q"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.iv_r_TRELLIS_FF_Q_127",
+      "loc": [
+       52,
+       4
+      ],
+      "port": "Q"
+     },
+     "type": "clk-to-q"
+    },
+    {
+     "delay": 1.1790000200271606,
+     "from": {
+      "cell": "u_aes_top.u_core.iv_r_TRELLIS_FF_Q_127",
+      "loc": [
+       52,
+       4
+      ],
+      "port": "Q"
+     },
+     "net": "u_aes_top.u_core.iv_r[0]",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:71.26-71.30"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.state_q_LUT4_B_1",
+      "loc": [
+       54,
+       6
+      ],
+      "port": "C"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.23600000143051147,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.state_q_LUT4_B_1",
+      "loc": [
+       54,
+       6
+      ],
+      "port": "C"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.state_q_LUT4_B_1",
+      "loc": [
+       54,
+       6
+      ],
+      "port": "F"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 1.1260000467300415,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.state_q_LUT4_B_1",
+      "loc": [
+       54,
+       6
+      ],
+      "port": "F"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.state_q_LUT4_B_1_Z",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB0",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "B"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.44699999690055847,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB0",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "B"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB0",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB0",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB1",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB1",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB1",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB1",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB0",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB0",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB0",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB0",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB1",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB1",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB1",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB1",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB0",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB0",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB0",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB0",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB1",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB1",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB1",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB1",
+      "loc": [
+       55,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB0",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB1",
+      "loc": [
+       56,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB0",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB1",
+      "loc": [
+       57,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB0",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB1",
+      "loc": [
+       58,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB0",
+      "loc": [
+       59,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.07100000232458115,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB0",
+      "loc": [
+       59,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB0",
+      "loc": [
+       59,
+       5
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB0",
+      "loc": [
+       59,
+       5
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB1",
+      "loc": [
+       59,
+       5
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.40299999713897705,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB1",
+      "loc": [
+       59,
+       5
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB1",
+      "loc": [
+       59,
+       5
+      ],
+      "port": "F"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0.12999999523162842,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB1",
+      "loc": [
+       59,
+       5
+      ],
+      "port": "F"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[31]",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q",
+      "loc": [
+       59,
+       5
+      ],
+      "port": "DI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q",
+      "loc": [
+       59,
+       5
+      ],
+      "port": "DI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q",
+      "loc": [
+       59,
+       5
+      ],
+      "port": "DI"
+     },
+     "type": "setup"
+    }
+   ],
+   "to": "posedge $glbnet$clk_i$TRELLIS_IO_IN"
+  },
+  {
+   "from": "<async>",
+   "path": [
+    {
+     "delay": 0,
+     "from": {
+      "cell": "rst_n_i$tr_io",
+      "loc": [
+       72,
+       8
+      ],
+      "port": "O"
+     },
+     "to": {
+      "cell": "rst_n_i$tr_io",
+      "loc": [
+       72,
+       8
+      ],
+      "port": "O"
+     },
+     "type": "source"
+    },
+    {
+     "delay": 0.7990000247955322,
+     "from": {
+      "cell": "rst_n_i$tr_io",
+      "loc": [
+       72,
+       8
+      ],
+      "port": "O"
+     },
+     "net": "rst_n_i$TRELLIS_IO_IN",
+     "sources": [
+      "/Users/james/Workspace/AES/synth/aes_impl_top.sv:64.18-64.25"
+     ],
+     "to": {
+      "cell": "rst_sync_q_TRELLIS_FF_Q",
+      "loc": [
+       68,
+       8
+      ],
+      "port": "M"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "rst_sync_q_TRELLIS_FF_Q",
+      "loc": [
+       68,
+       8
+      ],
+      "port": "M"
+     },
+     "to": {
+      "cell": "rst_sync_q_TRELLIS_FF_Q",
+      "loc": [
+       68,
+       8
+      ],
+      "port": "M"
+     },
+     "type": "setup"
+    }
+   ],
+   "to": "posedge $glbnet$clk_i$TRELLIS_IO_IN"
+  },
+  {
+   "from": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "path": [
+    {
+     "delay": 0.5249999761581421,
+     "from": {
+      "cell": "done_q_TRELLIS_FF_Q",
+      "loc": [
+       68,
+       17
+      ],
+      "port": "Q"
+     },
+     "to": {
+      "cell": "done_q_TRELLIS_FF_Q",
+      "loc": [
+       68,
+       17
+      ],
+      "port": "Q"
+     },
+     "type": "clk-to-q"
+    },
+    {
+     "delay": 0.8709999918937683,
+     "from": {
+      "cell": "done_q_TRELLIS_FF_Q",
+      "loc": [
+       68,
+       17
+      ],
+      "port": "Q"
+     },
+     "net": "done_o$TRELLIS_IO_OUT",
+     "sources": [
+      "/Users/james/Workspace/AES/synth/aes_impl_top.sv:271.19-271.25"
+     ],
+     "to": {
+      "cell": "pass_o_LUT4_Z",
+      "loc": [
+       70,
+       17
+      ],
+      "port": "D"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.23600000143051147,
+     "from": {
+      "cell": "pass_o_LUT4_Z",
+      "loc": [
+       70,
+       17
+      ],
+      "port": "D"
+     },
+     "to": {
+      "cell": "pass_o_LUT4_Z",
+      "loc": [
+       70,
+       17
+      ],
+      "port": "F"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0.8420000076293945,
+     "from": {
+      "cell": "pass_o_LUT4_Z",
+      "loc": [
+       70,
+       17
+      ],
+      "port": "F"
+     },
+     "net": "pass_o$TRELLIS_IO_OUT",
+     "sources": [
+      "/Users/james/Workspace/AES/synth/aes_impl_top.sv:66.18-66.24"
+     ],
+     "to": {
+      "cell": "pass_o$tr_io",
+      "loc": [
+       72,
+       17
+      ],
+      "port": "I"
+     },
+     "type": "routing"
+    }
+   ],
+   "to": "<async>"
+  }
+ ],
+ "fmax": {
+  "$glbnet$clk_i$TRELLIS_IO_IN": {
+   "achieved": 195.6564178466797,
+   "constraint": 400
+  }
+ },
+ "utilization": {
+  "ALU54B": {
+   "available": 14,
+   "used": 0
+  },
+  "CLKDIVF": {
+   "available": 4,
+   "used": 0
+  },
+  "DCCA": {
+   "available": 56,
+   "used": 1
+  },
+  "DCSC": {
+   "available": 2,
+   "used": 0
+  },
+  "DCUA": {
+   "available": 1,
+   "used": 0
+  },
+  "DDRDLL": {
+   "available": 4,
+   "used": 0
+  },
+  "DLLDELD": {
+   "available": 8,
+   "used": 0
+  },
+  "DP16KD": {
+   "available": 56,
+   "used": 10
+  },
+  "DQSBUFM": {
+   "available": 8,
+   "used": 0
+  },
+  "DTR": {
+   "available": 1,
+   "used": 0
+  },
+  "ECLKBRIDGECS": {
+   "available": 2,
+   "used": 0
+  },
+  "ECLKSYNCB": {
+   "available": 10,
+   "used": 0
+  },
+  "EHXPLLL": {
+   "available": 2,
+   "used": 0
+  },
+  "EXTREFB": {
+   "available": 1,
+   "used": 0
+  },
+  "GSR": {
+   "available": 1,
+   "used": 0
+  },
+  "IOLOGIC": {
+   "available": 128,
+   "used": 0
+  },
+  "JTAGG": {
+   "available": 1,
+   "used": 0
+  },
+  "MULT18X18D": {
+   "available": 28,
+   "used": 0
+  },
+  "OSCG": {
+   "available": 1,
+   "used": 0
+  },
+  "PCSCLKDIV": {
+   "available": 2,
+   "used": 0
+  },
+  "SEDGA": {
+   "available": 1,
+   "used": 0
+  },
+  "SIOLOGIC": {
+   "available": 69,
+   "used": 0
+  },
+  "TRELLIS_COMB": {
+   "available": 24288,
+   "used": 1902
+  },
+  "TRELLIS_ECLKBUF": {
+   "available": 8,
+   "used": 0
+  },
+  "TRELLIS_FF": {
+   "available": 24288,
+   "used": 1831
+  },
+  "TRELLIS_IO": {
+   "available": 197,
+   "used": 4
+  },
+  "TRELLIS_RAMW": {
+   "available": 3036,
+   "used": 64
+  },
+  "USRMCLK": {
+   "available": 1,
+   "used": 0
+  }
+ }
+}

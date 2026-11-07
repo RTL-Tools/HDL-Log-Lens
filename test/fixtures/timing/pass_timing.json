@@ -1,0 +1,3604 @@
+{
+ "critical_paths": [
+  {
+   "from": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "path": [
+    {
+     "delay": 0.39500001072883606,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.state_q_TRELLIS_FF_Q_2",
+      "loc": [
+       68,
+       8
+      ],
+      "port": "Q"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.state_q_TRELLIS_FF_Q_2",
+      "loc": [
+       68,
+       8
+      ],
+      "port": "Q"
+     },
+     "type": "clk-to-q"
+    },
+    {
+     "delay": 1.1119999885559082,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.state_q_TRELLIS_FF_Q_2",
+      "loc": [
+       68,
+       8
+      ],
+      "port": "Q"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.state_q[0]",
+     "sources": [
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_map.v:108.23-108.24"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.state_q_LUT4_D_30",
+      "loc": [
+       56,
+       7
+      ],
+      "port": "D"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.18000000715255737,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.state_q_LUT4_D_30",
+      "loc": [
+       56,
+       7
+      ],
+      "port": "D"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.state_q_LUT4_D_30",
+      "loc": [
+       56,
+       7
+      ],
+      "port": "F"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0.6169999837875366,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.state_q_LUT4_D_30",
+      "loc": [
+       56,
+       7
+      ],
+      "port": "F"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.state_q_LUT4_D_30_Z",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB1",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "B"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.35499998927116394,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB1",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "B"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB1",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB1",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S1_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB0",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB0",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB0",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB0",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB1",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB1",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB1",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4$CCU2_COMB1",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_4_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB0",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB0",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB0",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB0",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB1",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB1",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB1",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_COMB1",
+      "loc": [
+       57,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_2_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_1_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_14_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB0",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13$CCU2_COMB1",
+      "loc": [
+       58,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_13_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_12_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_11_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_10_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB0",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB1",
+      "loc": [
+       59,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB0",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB1",
+      "loc": [
+       60,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5_COUT",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:74.7-80.4",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB0",
+      "loc": [
+       61,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.0560000017285347,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB0",
+      "loc": [
+       61,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB0",
+      "loc": [
+       61,
+       7
+      ],
+      "port": "FCO"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB0",
+      "loc": [
+       61,
+       7
+      ],
+      "port": "FCO"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_FCI_INT",
+     "sources": [],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB1",
+      "loc": [
+       61,
+       7
+      ],
+      "port": "FCI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.2930000126361847,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB1",
+      "loc": [
+       61,
+       7
+      ],
+      "port": "FCI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB1",
+      "loc": [
+       61,
+       7
+      ],
+      "port": "F"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0.11800000071525574,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB1",
+      "loc": [
+       61,
+       7
+      ],
+      "port": "F"
+     },
+     "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[31]",
+     "sources": [
+      "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+      "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+     ],
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q",
+      "loc": [
+       61,
+       7
+      ],
+      "port": "DI"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q",
+      "loc": [
+       61,
+       7
+      ],
+      "port": "DI"
+     },
+     "to": {
+      "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q",
+      "loc": [
+       61,
+       7
+      ],
+      "port": "DI"
+     },
+     "type": "setup"
+    }
+   ],
+   "to": "posedge $glbnet$clk_i$TRELLIS_IO_IN"
+  },
+  {
+   "from": "<async>",
+   "path": [
+    {
+     "delay": 0,
+     "from": {
+      "cell": "rst_n_i$tr_io",
+      "loc": [
+       72,
+       5
+      ],
+      "port": "O"
+     },
+     "to": {
+      "cell": "rst_n_i$tr_io",
+      "loc": [
+       72,
+       5
+      ],
+      "port": "O"
+     },
+     "type": "source"
+    },
+    {
+     "delay": 0.7879999876022339,
+     "from": {
+      "cell": "rst_n_i$tr_io",
+      "loc": [
+       72,
+       5
+      ],
+      "port": "O"
+     },
+     "net": "rst_n_i$TRELLIS_IO_IN",
+     "sources": [
+      "/Users/james/Workspace/AES/synth/aes_impl_top.sv:64.18-64.25"
+     ],
+     "to": {
+      "cell": "rst_sync_q_TRELLIS_FF_Q",
+      "loc": [
+       70,
+       5
+      ],
+      "port": "M"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0,
+     "from": {
+      "cell": "rst_sync_q_TRELLIS_FF_Q",
+      "loc": [
+       70,
+       5
+      ],
+      "port": "M"
+     },
+     "to": {
+      "cell": "rst_sync_q_TRELLIS_FF_Q",
+      "loc": [
+       70,
+       5
+      ],
+      "port": "M"
+     },
+     "type": "setup"
+    }
+   ],
+   "to": "posedge $glbnet$clk_i$TRELLIS_IO_IN"
+  },
+  {
+   "from": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "path": [
+    {
+     "delay": 0.39500001072883606,
+     "from": {
+      "cell": "done_q_TRELLIS_FF_Q",
+      "loc": [
+       68,
+       14
+      ],
+      "port": "Q"
+     },
+     "to": {
+      "cell": "done_q_TRELLIS_FF_Q",
+      "loc": [
+       68,
+       14
+      ],
+      "port": "Q"
+     },
+     "type": "clk-to-q"
+    },
+    {
+     "delay": 0.996999979019165,
+     "from": {
+      "cell": "done_q_TRELLIS_FF_Q",
+      "loc": [
+       68,
+       14
+      ],
+      "port": "Q"
+     },
+     "net": "done_o$TRELLIS_IO_OUT",
+     "sources": [
+      "/Users/james/Workspace/AES/synth/aes_impl_top.sv:271.19-271.25"
+     ],
+     "to": {
+      "cell": "pass_o_LUT4_Z",
+      "loc": [
+       69,
+       17
+      ],
+      "port": "D"
+     },
+     "type": "routing"
+    },
+    {
+     "delay": 0.18000000715255737,
+     "from": {
+      "cell": "pass_o_LUT4_Z",
+      "loc": [
+       69,
+       17
+      ],
+      "port": "D"
+     },
+     "to": {
+      "cell": "pass_o_LUT4_Z",
+      "loc": [
+       69,
+       17
+      ],
+      "port": "F"
+     },
+     "type": "logic"
+    },
+    {
+     "delay": 0.8640000224113464,
+     "from": {
+      "cell": "pass_o_LUT4_Z",
+      "loc": [
+       69,
+       17
+      ],
+      "port": "F"
+     },
+     "net": "pass_o$TRELLIS_IO_OUT",
+     "sources": [
+      "/Users/james/Workspace/AES/synth/aes_impl_top.sv:66.18-66.24"
+     ],
+     "to": {
+      "cell": "pass_o$tr_io",
+      "loc": [
+       72,
+       17
+      ],
+      "port": "I"
+     },
+     "type": "routing"
+    }
+   ],
+   "to": "<async>"
+  }
+ ],
+ "fmax": {
+  "$glbnet$clk_i$TRELLIS_IO_IN": {
+   "achieved": 255.7544708251953,
+   "constraint": 250
+  }
+ },
+ "detailed_net_timings": [
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB1",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q",
+     "delay": [
+      1.99399995803833,
+      3.9100000858306885
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[31]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+    "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_3$CCU2_COMB0",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_1",
+     "delay": [
+      1.7960000038146973,
+      3.8889999389648438
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[30]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+    "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB1",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_2",
+     "delay": [
+      2.200000047683716,
+      3.8540000915527344
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[29]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+    "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[2].u_sbox.d1_o_LUT4_B_3_Z_LUT4_D",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_31",
+     "delay": [
+      1.2130000591278076,
+      3.8499999046325684
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[1].u_sbox.d1_o_LUT4_A_Z_LUT4_D_Z[96]",
+   "port": "F",
+   "sources": []
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_5$CCU2_COMB0",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_3",
+     "delay": [
+      2.121999979019165,
+      3.8329999446868896
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[28]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+    "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ks_pop_LUT4_D",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_last_q_TRELLIS_FF_Q",
+     "delay": [
+      2.680000066757202,
+      3.809999942779541
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_99",
+     "delay": [
+      2.23799991607666,
+      3.368000030517578
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_98",
+     "delay": [
+      2.4790000915527344,
+      3.6089999675750732
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_97",
+     "delay": [
+      2.3399999141693115,
+      3.4700000286102295
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_96",
+     "delay": [
+      2.3399999141693115,
+      3.4700000286102295
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_95",
+     "delay": [
+      2.328000068664551,
+      3.4579999446868896
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_94",
+     "delay": [
+      2.256999969482422,
+      3.38700008392334
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_93",
+     "delay": [
+      2.242000102996826,
+      3.371999979019165
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_92",
+     "delay": [
+      2.256999969482422,
+      3.38700008392334
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_91",
+     "delay": [
+      2.1670000553131104,
+      3.296999931335449
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_90",
+     "delay": [
+      2.242000102996826,
+      3.371999979019165
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_9",
+     "delay": [
+      2.242000102996826,
+      3.371999979019165
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_89",
+     "delay": [
+      2.196000099182129,
+      3.3259999752044678
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_88",
+     "delay": [
+      2.196000099182129,
+      3.3259999752044678
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_87",
+     "delay": [
+      2.328000068664551,
+      3.4579999446868896
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_86",
+     "delay": [
+      2.3399999141693115,
+      3.4700000286102295
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_85",
+     "delay": [
+      2.23799991607666,
+      3.368000030517578
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_84",
+     "delay": [
+      2.367000102996826,
+      3.496999979019165
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_83",
+     "delay": [
+      2.2249999046325684,
+      3.3550000190734863
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_82",
+     "delay": [
+      2.2249999046325684,
+      3.3550000190734863
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_81",
+     "delay": [
+      2.196000099182129,
+      3.3259999752044678
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_80",
+     "delay": [
+      2.2249999046325684,
+      3.3550000190734863
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_8",
+     "delay": [
+      2.484999895095825,
+      3.615000009536743
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_79",
+     "delay": [
+      2.492000102996826,
+      3.621999979019165
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_78",
+     "delay": [
+      2.438999891281128,
+      3.569000005722046
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_77",
+     "delay": [
+      2.438999891281128,
+      3.569000005722046
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_76",
+     "delay": [
+      2.502000093460083,
+      3.631999969482422
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_75",
+     "delay": [
+      2.438999891281128,
+      3.569000005722046
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_74",
+     "delay": [
+      2.3399999141693115,
+      3.4700000286102295
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_73",
+     "delay": [
+      2.196000099182129,
+      3.3259999752044678
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_72",
+     "delay": [
+      2.256999969482422,
+      3.38700008392334
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_71",
+     "delay": [
+      2.3399999141693115,
+      3.4700000286102295
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_70",
+     "delay": [
+      2.4790000915527344,
+      3.6089999675750732
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_7",
+     "delay": [
+      2.234999895095825,
+      3.365000009536743
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_69",
+     "delay": [
+      2.3399999141693115,
+      3.4700000286102295
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_68",
+     "delay": [
+      2.367000102996826,
+      3.496999979019165
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_67",
+     "delay": [
+      2.23799991607666,
+      3.368000030517578
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_66",
+     "delay": [
+      2.3570001125335693,
+      3.486999988555908
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_65",
+     "delay": [
+      2.3570001125335693,
+      3.486999988555908
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_64",
+     "delay": [
+      2.502000093460083,
+      3.631999969482422
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_63",
+     "delay": [
+      2.4800000190734863,
+      3.609999895095825
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_62",
+     "delay": [
+      2.4839999675750732,
+      3.614000082015991
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_61",
+     "delay": [
+      2.4200000762939453,
+      3.549999952316284
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_60",
+     "delay": [
+      2.4800000190734863,
+      3.609999895095825
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_6",
+     "delay": [
+      2.2820000648498535,
+      3.4119999408721924
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_59",
+     "delay": [
+      2.6549999713897705,
+      3.7850000858306885
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_58",
+     "delay": [
+      2.4839999675750732,
+      3.614000082015991
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_57",
+     "delay": [
+      2.3949999809265137,
+      3.5250000953674316
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_56",
+     "delay": [
+      2.494999885559082,
+      3.625
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_55",
+     "delay": [
+      2.566999912261963,
+      3.697000026702881
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_54",
+     "delay": [
+      2.6570000648498535,
+      3.7869999408721924
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_53",
+     "delay": [
+      2.4730000495910645,
+      3.6029999256134033
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_52",
+     "delay": [
+      2.4800000190734863,
+      3.609999895095825
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_51",
+     "delay": [
+      2.4800000190734863,
+      3.609999895095825
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_50",
+     "delay": [
+      2.4730000495910645,
+      3.6029999256134033
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_5",
+     "delay": [
+      2.2820000648498535,
+      3.4119999408721924
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_49",
+     "delay": [
+      2.4200000762939453,
+      3.549999952316284
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_48",
+     "delay": [
+      2.6730000972747803,
+      3.802999973297119
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_47",
+     "delay": [
+      2.484999895095825,
+      3.615000009536743
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_46",
+     "delay": [
+      2.4839999675750732,
+      3.614000082015991
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_45",
+     "delay": [
+      2.234999895095825,
+      3.365000009536743
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_44",
+     "delay": [
+      2.2820000648498535,
+      3.4119999408721924
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_43",
+     "delay": [
+      2.484999895095825,
+      3.615000009536743
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_42",
+     "delay": [
+      2.4749999046325684,
+      3.6050000190734863
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_41",
+     "delay": [
+      2.4839999675750732,
+      3.614000082015991
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_40",
+     "delay": [
+      2.484999895095825,
+      3.615000009536743
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_4",
+     "delay": [
+      2.234999895095825,
+      3.365000009536743
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_39",
+     "delay": [
+      2.505000114440918,
+      3.634999990463257
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_38",
+     "delay": [
+      2.4200000762939453,
+      3.549999952316284
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_37",
+     "delay": [
+      2.4200000762939453,
+      3.549999952316284
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_36",
+     "delay": [
+      2.4839999675750732,
+      3.614000082015991
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_35",
+     "delay": [
+      2.4839999675750732,
+      3.614000082015991
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_34",
+     "delay": [
+      2.6530001163482666,
+      3.7829999923706055
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_33",
+     "delay": [
+      2.484999895095825,
+      3.615000009536743
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_32",
+     "delay": [
+      2.4730000495910645,
+      3.6029999256134033
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_31",
+     "delay": [
+      2.6700000762939453,
+      3.799999952316284
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_30",
+     "delay": [
+      2.4730000495910645,
+      3.6029999256134033
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_3",
+     "delay": [
+      2.234999895095825,
+      3.365000009536743
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_29",
+     "delay": [
+      2.4730000495910645,
+      3.6029999256134033
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_28",
+     "delay": [
+      2.6730000972747803,
+      3.802999973297119
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_27",
+     "delay": [
+      2.6549999713897705,
+      3.7850000858306885
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_26",
+     "delay": [
+      2.6549999713897705,
+      3.7850000858306885
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_25",
+     "delay": [
+      2.6549999713897705,
+      3.7850000858306885
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_24",
+     "delay": [
+      2.6549999713897705,
+      3.7850000858306885
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_23",
+     "delay": [
+      2.4730000495910645,
+      3.6029999256134033
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_22",
+     "delay": [
+      2.6530001163482666,
+      3.7829999923706055
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_21",
+     "delay": [
+      2.678999900817871,
+      3.809000015258789
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_20",
+     "delay": [
+      2.4730000495910645,
+      3.6029999256134033
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_2",
+     "delay": [
+      2.4839999675750732,
+      3.614000082015991
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_19",
+     "delay": [
+      2.680000066757202,
+      3.809999942779541
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_18",
+     "delay": [
+      2.6549999713897705,
+      3.7850000858306885
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_17",
+     "delay": [
+      2.6530001163482666,
+      3.7829999923706055
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_16",
+     "delay": [
+      2.6530001163482666,
+      3.7829999923706055
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_15",
+     "delay": [
+      2.234999895095825,
+      3.365000009536743
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_14",
+     "delay": [
+      2.234999895095825,
+      3.365000009536743
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_13",
+     "delay": [
+      2.3540000915527344,
+      3.4839999675750732
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_127",
+     "delay": [
+      2.434999942779541,
+      3.565000057220459
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_126",
+     "delay": [
+      2.196000099182129,
+      3.3259999752044678
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_125",
+     "delay": [
+      2.253999948501587,
+      3.384000062942505
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_124",
+     "delay": [
+      2.2669999599456787,
+      3.3970000743865967
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_123",
+     "delay": [
+      2.438999891281128,
+      3.569000005722046
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_122",
+     "delay": [
+      2.256999969482422,
+      3.38700008392334
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_121",
+     "delay": [
+      2.242000102996826,
+      3.371999979019165
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_120",
+     "delay": [
+      2.256999969482422,
+      3.38700008392334
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_12",
+     "delay": [
+      2.563999891281128,
+      3.694000005722046
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_119",
+     "delay": [
+      2.1670000553131104,
+      3.296999931335449
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_118",
+     "delay": [
+      2.4159998893737793,
+      3.5460000038146973
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_117",
+     "delay": [
+      2.234999895095825,
+      3.365000009536743
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_116",
+     "delay": [
+      2.4159998893737793,
+      3.5460000038146973
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_115",
+     "delay": [
+      2.505000114440918,
+      3.634999990463257
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_114",
+     "delay": [
+      2.3949999809265137,
+      3.5250000953674316
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_113",
+     "delay": [
+      2.505000114440918,
+      3.634999990463257
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_112",
+     "delay": [
+      2.494999885559082,
+      3.625
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_111",
+     "delay": [
+      2.430999994277954,
+      3.561000108718872
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_110",
+     "delay": [
+      2.3399999141693115,
+      3.4700000286102295
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_11",
+     "delay": [
+      2.484999895095825,
+      3.615000009536743
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_109",
+     "delay": [
+      2.3399999141693115,
+      3.4700000286102295
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_108",
+     "delay": [
+      2.430999994277954,
+      3.561000108718872
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_107",
+     "delay": [
+      2.365999937057495,
+      3.496000051498413
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_106",
+     "delay": [
+      2.492000102996826,
+      3.621999979019165
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_105",
+     "delay": [
+      2.365999937057495,
+      3.496000051498413
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_104",
+     "delay": [
+      2.4790000915527344,
+      3.6089999675750732
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_103",
+     "delay": [
+      2.23799991607666,
+      3.368000030517578
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_102",
+     "delay": [
+      2.196000099182129,
+      3.3259999752044678
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_101",
+     "delay": [
+      2.23799991607666,
+      3.368000030517578
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_100",
+     "delay": [
+      2.328000068664551,
+      3.4579999446868896
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_10",
+     "delay": [
+      2.390000104904175,
+      3.5199999809265137
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_1",
+     "delay": [
+      2.2820000648498535,
+      3.4119999408721924
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q",
+     "delay": [
+      2.4839999675750732,
+      3.614000082015991
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ks_pop_LUT4_D_Z",
+   "port": "F",
+   "sources": []
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[6].u_sbox.d0_o_LUT4_A_7_Z_LUT4_D",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_54",
+     "delay": [
+      1.2079999446868896,
+      3.799999952316284
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[1].u_sbox.d1_o_LUT4_A_Z_LUT4_D_Z[73]",
+   "port": "F",
+   "sources": []
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB0",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_5",
+     "delay": [
+      2.0810000896453857,
+      3.7769999504089355
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[26]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+    "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[0].u_sbox.d0_o_LUT4_A_Z_PFUMX_C0_BLUT_LUT4_Z",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_20",
+     "delay": [
+      1.590000033378601,
+      3.7739999294281006
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "M"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[1].u_sbox.d1_o_LUT4_A_Z_LUT4_D_Z[107]",
+   "port": "OFX",
+   "sources": []
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[0].u_sbox.d0_o_LUT4_B_5_Z_LUT4_D",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_22",
+     "delay": [
+      1.2549999952316284,
+      3.750999927520752
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[1].u_sbox.d1_o_LUT4_A_Z_LUT4_D_Z[105]",
+   "port": "F",
+   "sources": []
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[2].u_sbox.d0_o_LUT4_C_Z_PFUMX_C0_BLUT_LUT4_Z",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_110",
+     "delay": [
+      1.8630000352859497,
+      3.746999979019165
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "M"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[1].u_sbox.d1_o_LUT4_A_Z_LUT4_D_Z[17]",
+   "port": "OFX",
+   "sources": []
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB1",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_6",
+     "delay": [
+      2.1010000705718994,
+      3.742000102996826
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[25]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+    "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_7$CCU2_COMB0",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_7",
+     "delay": [
+      1.968999981880188,
+      3.7209999561309814
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[24]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+    "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_6$CCU2_COMB1",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_4",
+     "delay": [
+      1.8680000305175781,
+      3.7139999866485596
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[27]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+    "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB1",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_8",
+     "delay": [
+      2.049999952316284,
+      3.686000108718872
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[23]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+    "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[1].u_sbox.d1_o_LUT4_A_Z_LUT4_D_Z_LUT4_Z_24",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_28",
+     "delay": [
+      0.9750000238418579,
+      3.6679999828338623
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[1].u_sbox.d1_o_LUT4_A_Z_LUT4_D_Z[99]",
+   "port": "F",
+   "sources": []
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_8$CCU2_COMB0",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_9",
+     "delay": [
+      1.9390000104904175,
+      3.6649999618530273
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[22]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+    "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ks_mem.0.20_DO_1_LUT4_C",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_85",
+     "delay": [
+      2.1559998989105225,
+      3.6429998874664307
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ks_mem.0.1_DO_LUT4_B_Z[36]",
+   "port": "F",
+   "sources": []
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB1",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_10",
+     "delay": [
+      2.009000062942505,
+      3.630000114440918
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[21]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+    "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+   ]
+  },
+  {
+   "driver": "mis_PFUMX_Z_3_BLUT_LUT4_Z",
+   "endpoints": [
+    {
+     "cell": "mis_q_TRELLIS_FF_Q_9",
+     "delay": [
+      2.058000087738037,
+      3.621999979019165
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "M"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "mis[6]",
+   "port": "OFX",
+   "sources": [
+    "/Users/james/Workspace/AES/synth/aes_impl_top.sv:284.18-284.21"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_regs.axil_n_in_flight_TRELLIS_FF_Q_CE_LUT4_Z",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_regs.axil_n_in_flight_TRELLIS_FF_Q_1",
+     "delay": [
+      1.9639999866485596,
+      3.611999988555908
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "u_aes_top.u_regs.axil_n_in_flight_TRELLIS_FF_Q",
+     "delay": [
+      1.9639999866485596,
+      3.611999988555908
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_regs.axil_n_in_flight_TRELLIS_FF_Q_CE",
+   "port": "F",
+   "sources": []
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI_CCU2C_S0_9$CCU2_COMB0",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_11",
+     "delay": [
+      1.930999994277954,
+      3.6089999675750732
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ctr_nxt_q_TRELLIS_FF_Q_DI[20]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_cipher.sv:225.30-225.84",
+    "/Users/james/tools/oss-cad-suite/libexec/../share/yosys/ecp5/arith_map.v:34.26-34.27"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.ks_mem.0.18_DO_2_LUT4_C",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.out_data_q_TRELLIS_FF_Q_78",
+     "delay": [
+      2.2730000019073486,
+      3.5980000495910645
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.ks_mem.0.1_DO_LUT4_B_Z[41]",
+   "port": "F",
+   "sources": []
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[7].u_sbox.d0_o_LUT4_A_6_Z_LUT4_D",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_114",
+     "delay": [
+      1.4129999876022339,
+      3.5980000495910645
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[1].u_sbox.d1_o_LUT4_A_Z_LUT4_D_Z[13]",
+   "port": "F",
+   "sources": []
+  },
+  {
+   "driver": "mis_LUT4_Z_3",
+   "endpoints": [
+    {
+     "cell": "mis_q_TRELLIS_FF_Q_7",
+     "delay": [
+      1.25600004196167,
+      3.5940001010894775
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "mis[8]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/synth/aes_impl_top.sv:284.18-284.21"
+   ]
+  },
+  {
+   "driver": "pass_o_LUT4_Z",
+   "endpoints": [
+    {
+     "cell": "pass_o$tr_io",
+     "delay": [
+      1.8960000276565552,
+      2.436000108718872
+     ],
+     "event": "<async>",
+     "port": "I"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "pass_o$TRELLIS_IO_OUT",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/synth/aes_impl_top.sv:66.18-66.24"
+   ]
+  },
+  {
+   "driver": "done_q_TRELLIS_FF_Q",
+   "endpoints": [
+    {
+     "cell": "done_o$tr_io",
+     "delay": [
+      1.1299999952316284,
+      1.1959999799728394
+     ],
+     "event": "<async>",
+     "port": "I"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "done_o$TRELLIS_IO_OUT",
+   "port": "Q",
+   "sources": [
+    "/Users/james/Workspace/AES/synth/aes_impl_top.sv:271.19-271.25"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[5].u_sbox.g_out_reg.u_ram",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[5].u_sbox.d0_o_TRELLIS_FF_Q_2",
+     "delay": [
+      2.0409998893737793,
+      2.0810000896453857
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "M"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[5].u_sbox.g_out_reg.doa[5]",
+   "port": "DOA5",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_sbox_bram.sv:85.21-85.23"
+   ]
+  },
+  {
+   "driver": "take_LUT4_Z",
+   "endpoints": [
+    {
+     "cell": "out_cnt_q_TRELLIS_FF_Q",
+     "delay": [
+      2.128000020980835,
+      2.2279999256134033
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q_9",
+     "delay": [
+      2.2869999408721924,
+      2.38700008392334
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q_8",
+     "delay": [
+      2.128000020980835,
+      2.2279999256134033
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q_7",
+     "delay": [
+      2.2639999389648438,
+      2.364000082015991
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q_6",
+     "delay": [
+      2.128000020980835,
+      2.2279999256134033
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q_5",
+     "delay": [
+      2.2869999408721924,
+      2.38700008392334
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q_4",
+     "delay": [
+      2.2769999504089355,
+      2.377000093460083
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q_3",
+     "delay": [
+      2.2769999504089355,
+      2.377000093460083
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q_2",
+     "delay": [
+      2.128000020980835,
+      2.2279999256134033
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q_13",
+     "delay": [
+      2.2869999408721924,
+      2.38700008392334
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q_12",
+     "delay": [
+      2.2639999389648438,
+      2.364000082015991
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q_11",
+     "delay": [
+      2.2639999389648438,
+      2.364000082015991
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q_10",
+     "delay": [
+      2.2639999389648438,
+      2.364000082015991
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q_1",
+     "delay": [
+      2.072000026702881,
+      2.171999931335449
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_q_TRELLIS_FF_Q",
+     "delay": [
+      2.0280001163482666,
+      2.128000020980835
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "ct_exp_TRELLIS_FF_Q",
+     "delay": [
+      2.2929999828338623,
+      2.3929998874664307
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "CE"
+    },
+    {
+     "cell": "chk_q_TRELLIS_FF_Q",
+     "delay": [
+      1.1679999828338623,
+      1.2680000066757202
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "chk_last_q_TRELLIS_FF_Q_DI[1]",
+   "port": "F",
+   "sources": [
+    "/Users/james/Workspace/AES/synth/aes_impl_top.sv:272.19-272.23"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q_TRELLIS_FF_Q_64",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.u_engine.g_sbox[3].u_sbox.g_out_reg.u_ram",
+     "delay": [
+      1.7419999837875366,
+      1.8079999685287476
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "ADB10"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.u_engine.st0_q[63]",
+   "port": "Q",
+   "sources": [
+    "/Users/james/Workspace/AES/src/aes_round_engine.sv:97.19-97.24"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.u_key_schedule.u_sbox_hi.d1_o_LUT4_C_Z_LUT4_Z_26",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.u_key_schedule.rk_q_TRELLIS_FF_Q_39",
+     "delay": [
+      1.2630000114440918,
+      2.134999990463257
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "DI"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.u_key_schedule.u_sbox_hi.d1_o_LUT4_C_Z[88]",
+   "port": "F",
+   "sources": []
+  },
+  {
+   "driver": "u_aes_top.u_regs.field_storage_TRELLIS_FF_Q_29",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.key_r_TRELLIS_FF_Q_29",
+     "delay": [
+      0.9419999718666077,
+      1.0080000162124634
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "M"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.hwif_out[226]",
+   "port": "Q",
+   "sources": [
+    "/Users/james/Workspace/AES/out/regs/sv/aes_register_file_axi_lite.sv:36.59-36.67"
+   ]
+  },
+  {
+   "driver": "u_aes_top.u_core.u_aes_cipher.u_engine.rk_mem.0.2$RAMW_SLICE",
+   "endpoints": [
+    {
+     "cell": "u_aes_top.u_core.u_aes_cipher.u_engine.rk_mem.0.2$DPRAM_COMB0",
+     "delay": [
+      1.1480000019073486,
+      1.2139999866485596
+     ],
+     "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+     "port": "WD"
+    }
+   ],
+   "event": "posedge $glbnet$clk_i$TRELLIS_IO_IN",
+   "net": "u_aes_top.u_core.u_aes_cipher.u_engine.rk_mem.0.2$RAMW_SLICE$conn$WDO0",
+   "port": "WDO0",
+   "sources": []
+  }
+ ]
+}

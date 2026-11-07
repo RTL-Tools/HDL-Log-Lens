@@ -17,13 +17,30 @@ Supported tools: **Verilator, NVC, Yosys, nextpnr**. Vivado and Questa will be a
 - `source` is the tool name, `code` the tool's message ID (e.g. `UNUSEDSIGNAL`).
 - nextpnr messages have no location, so they attach to the log file.
 
-## Settings & command
+## Sidebar
+
+The **HDL Log Lens** Activity Bar icon shows the same problems as a tree you can regroup (tool, log, file, severity, message ID). Entries sort by severity, then file, then line; click one to open the source line.
+
+## Timing table
+
+A **Timing** tab in the bottom panel (next to Problems) lists the source lines that limit your timing, **one row per line**, worst slack first. It reads nextpnr timing reports (`hdlLogLens.timingGlobs`, default `**/out/reports/**/*_timing.json`, from `nextpnr --report --detailed-timing-report`) and needs the sibling `<name>_routed.json` (`nextpnr --write`), whose cells carry the HDL line they came from.
+
+Columns: **Source** (`file:line`), **Slack** (of the worst path or register input through the line: clock period minus its arrival time), **Arrival**, **Endpoints** (register inputs ending on the line; a whole bus collapses into one row), **Worst endpoint / path**, **Report**. Click a column header to re-sort; click a row (or press Enter) to open the line. `hdlLogLens.worstLines` (default 200) caps the number of lines.
+
+A register's source line is usually the start of its `always_ff` block. Lines are included only if they trace to your code, so delay in tool-library cells and endpoints with no source line are left out. Lines touched only by unconstrained (async) paths have no slack. There is no TNS: nextpnr doesn't report it.
+
+## Settings & commands
 
 | | |
 |---|---|
 | `hdlLogLens.logGlobs` | log/report globs to parse |
 | `hdlLogLens.tool` | `auto` or force one parser |
 | `hdlLogLens.suppressCodes` | message IDs to hide |
+| `hdlLogLens.worstLines` | how many source lines the Timing table lists (default 200) |
+| `hdlLogLens.timingGlobs` | nextpnr timing reports for the Timing view |
+| `hdlLogLens.inlineTiming` | show delay/slack at the end of timing-critical lines (default on) |
+| `hdlLogLens.groupBy` | sidebar grouping: `tool`, `log`, `file`, `severity` or `code` |
+| **HDL Log Lens: Group problems by…** | pick the sidebar grouping (also the list icon in the sidebar title) |
 | **HDL Log Lens: Clear HDL problems** | empties the panel until a log changes again |
 
 ## Known limits
