@@ -17,7 +17,7 @@ exports.run = async function run() {
     while (!fs.existsSync(path.join(dir, `${name}.done`))) await sleep(100);
   };
 
-  const api = await vscode.extensions.getExtension('fpga-james.hdl-log-lens').activate();
+  const api = await vscode.extensions.getExtension('HDL-Tools.hdl-log-lens').activate();
   for (let i = 0; i < 150 && !(api.problems.rows.length > 0 && api.timing.rows.length > 0); i++) await sleep(200);
   await cmd('workbench.action.closeSidebar');
   await cmd('workbench.action.closeAuxiliaryBar');

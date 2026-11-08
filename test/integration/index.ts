@@ -15,7 +15,7 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 let step = '';
 async function check(): Promise<void> {
-  const api = (await vscode.extensions.getExtension('fpga-james.hdl-log-lens')!.activate()) as { problems: import('../../src/problemsView').ProblemsPanel; timing: import('../../src/timingView').TimingPanel; inline: { annotationsFor(d: vscode.TextDocument): { line: number; text: string; hover: string }[] }; inlineProblems: { notesFor(d: vscode.TextDocument): { line: number; text: string; severity: string }[] } };
+  const api = (await vscode.extensions.getExtension('HDL-Tools.hdl-log-lens')!.activate()) as { problems: import('../../src/problemsView').ProblemsPanel; timing: import('../../src/timingView').TimingPanel; inline: { annotationsFor(d: vscode.TextDocument): { line: number; text: string; hover: string }[] }; inlineProblems: { notesFor(d: vscode.TextDocument): { line: number; text: string; severity: string }[] } };
   for (let i = 0; i < 100 && !['verilator', 'yosys', 'nextpnr', 'nvc'].every((t) => ours().some((x) => x.d.source === t)); i++) await sleep(300);
 
   const all = ours();
