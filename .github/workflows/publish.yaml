@@ -1,12 +1,15 @@
+# Push a tag like v0.1.2 to test, build, publish to the Marketplace and create the GitHub release.
+# Marketplace auth is trusted publishing (OIDC): the publisher has a policy naming this repo and this exact filename (publish.yaml), so there is no token secret.
 name: Publish
-
 on:
   push:
     tags: ['v*']
-
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # GitHub release
+      id-token: write   # OIDC token for Marketplace trusted publishing
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -17,7 +20,10 @@ jobs:
       - run: npm test
       - name: Tag must match package.json version
         run: test "v$(node -p "require('./package.json').version")" = "$GITHUB_REF_NAME"
-      - name: Publish to VS Marketplace
-        run: npx --yes @vscode/vsce publish
+      - run: npx --yes @vscode/vsce@4.1.0 package --skip-license
+      - name: Publish to Marketplace
+        run: npx --yes @vscode/vsce@4.1.0 publish --oidc --packagePath hdl-log-lens-*.vsix
+      - name: GitHub release
         env:
-          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" hdl-log-lens-*.vsix --title "HDL Log Lens $GITHUB_REF_NAME" --generate-notes
