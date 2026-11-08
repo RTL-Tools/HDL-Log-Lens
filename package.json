@@ -3,7 +3,7 @@
   "displayName": "HDL Log Lens",
   "description": "Shows warnings and errors from Verilator, NVC, Yosys and nextpnr logs in the Problems panel.",
   "icon": "media/logo.png",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "HDL-Tools",
   "license": "MIT",
   "engines": {
