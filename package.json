@@ -4,7 +4,7 @@
   "description": "Shows warnings and errors from Verilator, NVC, Yosys and nextpnr logs in the Problems panel.",
   "icon": "media/logo.png",
   "version": "0.0.1",
-  "publisher": "fpga-james",
+  "publisher": "HDL-Tools",
   "license": "MIT",
   "engines": {
     "vscode": "^1.90.0"
