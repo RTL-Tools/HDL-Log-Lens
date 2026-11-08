@@ -2,6 +2,8 @@
 
 # HDL-Log-Lens
 
+> **Disclaimer:** this extension was generated with AI (Claude Code). It has been tested against real logs, but review its output before relying on it, and expect rough edges.
+
 Turn HDL tool logs into clickable VS Code problems — NVC, Verilator, Yosys, nextpnr, Vivado, Questa.
 
 _Implemented today: **Verilator, NVC, Yosys, nextpnr**. Vivado and Questa will be added once they can be tested against real logs._
@@ -16,16 +18,22 @@ A VS Code extension that reads the log and report files your HDL tools leave on 
 
 ## Install
 
-Not on the Marketplace yet; install the packaged extension (VS Code 1.90 or newer):
+Install **HDL Log Lens** from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=HDL-Tools.hdl-log-lens) (VS Code 1.90 or newer), or from the command line:
+
+```
+code --install-extension HDL-Tools.hdl-log-lens
+```
+
+To build it from source instead:
 
 ```
 npm install
 npm run build
 npx @vscode/vsce package --no-dependencies
-code --install-extension hdl-log-lens-0.0.1.vsix
+code --install-extension hdl-log-lens-*.vsix
 ```
 
-If `code` isn't on your PATH, use the Extensions view → `…` menu → **Install from VSIX…** instead. Then run **Developer: Reload Window**. The extension starts with VS Code and logs what it does to the **HDL Log Lens** Output channel (which logs it found, how many problems, why a log was skipped).
+If `code` isn't on your PATH, use the Extensions view → `…` menu → **Install from VSIX…** instead. The extension starts with VS Code and logs what it does to the **HDL Log Lens** Output channel (which logs it found, how many problems, why a log was skipped).
 
 ## Getting logs for it to read
 
