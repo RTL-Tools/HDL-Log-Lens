@@ -1,0 +1,18 @@
+# vsim top -c -do "run -all;exit" "+UVM_RESOURCE_DB_TRACE" 
+# Start time: 02:03:51 on Nov 08,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vsim-3764) res.sv(23): Stand-alone call to function 'read_by_name' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /res_sv_unit File: res.sv
+# ** Warning: (vsim-3764) res.sv(24): Stand-alone call to function 'get_by_name' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /res_sv_unit File: res.sv
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Simon  Hostname: SIMONS-LAPTOP  ProcessID: 17452
+#           Attempting to use alternate WLF file "./wlft2ww4jt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft2ww4jt
+run
+run
+run
+run
+# End time: 15:57:49 on Oct 09,2025, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 2

@@ -75,7 +75,9 @@
             "verilator",
             "yosys",
             "nextpnr",
-            "nvc"
+            "nvc",
+            "vivado",
+            "questa"
           ],
           "default": "auto",
           "description": "Force one parser for every log instead of auto-detecting from file name and contents."

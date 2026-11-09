@@ -1,5 +1,5 @@
 export type Severity = 'error' | 'warning' | 'info';
-export type Tool = 'verilator' | 'yosys' | 'nextpnr' | 'nvc';
+export type Tool = 'verilator' | 'yosys' | 'nextpnr' | 'nvc' | 'vivado' | 'questa';
 
 export interface Finding {
   file?: string; // undefined => attach to the log file
