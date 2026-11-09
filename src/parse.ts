@@ -2,20 +2,25 @@ import { basename, dirname } from 'node:path';
 import { dedupe } from './dedupe';
 import { parseNextpnr } from './parsers/nextpnr';
 import { parseNvc } from './parsers/nvc';
+import { parseQuesta } from './parsers/questa';
 import { parseVerilator } from './parsers/verilator';
+import { parseVivado } from './parsers/vivado';
 import { parseYosys } from './parsers/yosys';
 import type { Finding, Parser, Tool } from './types';
 
 const PARSERS: Record<Tool, Parser> = {
-  verilator: parseVerilator, yosys: parseYosys, nextpnr: parseNextpnr, nvc: parseNvc,
+  verilator: parseVerilator, yosys: parseYosys, nextpnr: parseNextpnr, nvc: parseNvc, vivado: parseVivado, questa: parseQuesta,
 };
 
 // nextpnr is listed before yosys: AES keeps nextpnr.log inside a yosys/ folder.
 const BY_NAME: [RegExp, Tool][] = [
   [/nextpnr/i, 'nextpnr'], [/yosys/i, 'yosys'], [/verilator/i, 'verilator'], [/nvc/i, 'nvc'],
+  [/vivado|xvlog|xvhdl|xelab/i, 'vivado'], [/questa|^(transcript|v(sim|log|com)\b)/i, 'questa'],
 ];
 const BY_CONTENT: [RegExp, Tool][] = [
   [/^%(Warning|Error)/m, 'verilator'],
+  [/\((?:vsim|vlog|vcom|vopt)-\w+\)/, 'questa'], // before nvc: both print "** Error:"
+  [/^(WARNING|CRITICAL WARNING|ERROR): \[[A-Za-z_]+ [\d-]+\]/m, 'vivado'],
   [/^\*\* (Error|Warning|Fatal|Note):/m, 'nvc'],
   [/^\s*Yosys \d/m, 'yosys'],
   [/nextpnr-/, 'nextpnr'],

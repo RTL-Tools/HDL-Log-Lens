@@ -47,7 +47,15 @@ test('50 000-line log parses in under a second', () => {
 });
 
 test('empty input is fine for every tool override', () => {
-  for (const t of ['verilator', 'yosys', 'nextpnr', 'nvc'] as const) {
+  for (const t of ['verilator', 'yosys', 'nextpnr', 'nvc', 'vivado', 'questa'] as const) {
     assert.deepEqual(parseLog('/w/x.log', '', t)?.findings, []);
   }
+});
+
+test('detects Vivado and Questa by name and content; Questa wins over NVC on "** Error:"', () => {
+  assert.equal(detectTool('/w/out/xvlog.log', ''), 'vivado');
+  assert.equal(detectTool('/w/sim/transcript', ''), 'questa');
+  assert.equal(detectTool('/w/a.log', 'ERROR: [VRFC 10-91] x [a.v:1]\n'), 'vivado');
+  assert.equal(detectTool('/w/a.log', '# ** Warning: (vsim-3764) a.sv(1): x\n'), 'questa');
+  assert.equal(detectTool('/w/a.log', '** Error: x\n    > a.vhd:1\n'), 'nvc');
 });

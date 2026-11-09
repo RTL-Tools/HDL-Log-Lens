@@ -6,7 +6,7 @@
 
 Turn HDL tool logs into clickable VS Code problems — NVC, Verilator, Yosys, nextpnr, Vivado, Questa.
 
-_Implemented today: **Verilator, NVC, Yosys, nextpnr**. Vivado and Questa will be added once they can be tested against real logs._
+_Implemented today: **Verilator, NVC, Yosys, nextpnr, Vivado, Questa**. Vivado and Questa are tested on a handful of public logs only; see [Known limits](#known-limits)._
 
 A VS Code extension that reads the log and report files your HDL tools leave on disk and puts what matters next to your code:
 
@@ -44,9 +44,11 @@ verilator --lint-only ... > out/reports/verilator/lint.log 2>&1
 nvc -a ... > out/reports/nvc/sim.log 2>&1
 yosys ... -l out/reports/yosys/yosys.log
 nextpnr-ecp5 ... -l out/reports/yosys/nextpnr.log
+vivado -mode batch ... -log out/reports/vivado/vivado.log   # or xvlog/xelab logs
+vlog ... > out/reports/questa/vlog.log 2>&1       # or Questa's transcript
 ```
 
-The tool is detected from the file name or its parent folder (`verilator/`, `nvc/`, `yosys/`, `nextpnr`), then from the log's contents; set `hdlLogLens.tool` to force one parser.
+The tool is detected from the file name or its parent folder (`verilator/`, `nvc/`, `yosys/`, `nextpnr`, `vivado/`, `questa/`), then from the log's contents; set `hdlLogLens.tool` to force one parser.
 
 For the [Timing table](#timing-table), also have nextpnr write its report and routed netlist next to each other: `--report out/reports/impl/<name>_timing.json --detailed-timing-report --write out/reports/impl/<name>_routed.json`.
 
@@ -113,7 +115,7 @@ Lines that appear in the timing table also get a muted note at the end of the li
 | Setting | |
 |---|---|
 | `hdlLogLens.logGlobs` | log/report globs to parse (default `**/out/reports/**/*.log`, `**/*.rpt`) |
-| `hdlLogLens.tool` | `auto`, or force one parser (`verilator`, `yosys`, `nextpnr`, `nvc`) |
+| `hdlLogLens.tool` | `auto`, or force one parser (`verilator`, `yosys`, `nextpnr`, `nvc`, `vivado`, `questa`) |
 | `hdlLogLens.suppressCodes` | message IDs to hide everywhere |
 | `hdlLogLens.waiverFile` | waiver file path (default `hdl-log-lens.waivers.json`) |
 | `hdlLogLens.timingGlobs` | nextpnr timing reports for the Timing table |
@@ -131,7 +133,8 @@ Lines that appear in the timing table also get a muted note at the end of the li
 ## Known limits
 
 - Problems and inline notes don't move or clear when you edit the source; they refresh when the log or report is next written.
-- Vivado and Questa logs are not supported yet. Timing needs nextpnr reports.
+- Vivado: `WARNING`, `CRITICAL WARNING` and `ERROR` messages only (INFO is skipped); Vivado `.rpt` reports are not read. Timing needs nextpnr reports.
+- Vivado and Questa parsers were checked against a few public logs. Synthesis messages with a `["file":line]` location and Questa `vlog` errors are written from the tool documentation and untested against real logs.
 - Windows/WSL paths are handled only for drive-letter paths in Verilator logs and filename search.
 - NVC parsing is tested on compile errors and a fatal; NVC *runtime* simulation messages (assertions etc.) are not yet tested against real logs.
 
