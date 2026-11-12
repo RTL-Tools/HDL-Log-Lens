@@ -133,8 +133,8 @@ Lines that appear in the timing table also get a muted note at the end of the li
 ## Known limits
 
 - Problems and inline notes don't move or clear when you edit the source; they refresh when the log or report is next written.
-- Vivado: `WARNING`, `CRITICAL WARNING` and `ERROR` messages only (INFO is skipped); Vivado `.rpt` reports are not read. Timing needs nextpnr reports.
-- Vivado and Questa parsers were checked against a few public logs. Synthesis messages with a `["file":line]` location and Questa `vlog` errors are written from the tool documentation and untested against real logs.
+- Vivado logs: `WARNING`, `CRITICAL WARNING` and `ERROR` messages only (INFO is skipped). Vivado `.rpt` reports: `report_drc`, `report_methodology` and `report_cdc` give one problem per violation, and `report_timing_summary` gives an error when WNS, WHS or WPWS is negative. These reports name cells and nets, not source lines, so their problems attach to the report file. Utilization reports and per-path timing are not read, and the Timing table needs nextpnr reports.
+- Vivado and Questa parsers were checked against a few public logs. Synthesis messages with a `["file":line]` location, Questa `vlog` errors and the failing case of the timing summary are not tested against real files.
 - Windows/WSL paths are handled only for drive-letter paths in Verilator logs and filename search.
 - NVC parsing is tested on compile errors and a fatal; NVC *runtime* simulation messages (assertions etc.) are not yet tested against real logs.
 

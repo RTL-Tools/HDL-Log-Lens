@@ -21,6 +21,7 @@ const BY_CONTENT: [RegExp, Tool][] = [
   [/^%(Warning|Error)/m, 'verilator'],
   [/\((?:vsim|vlog|vcom|vopt)-\w+\)/, 'questa'], // before nvc: both print "** Error:"
   [/^(WARNING|CRITICAL WARNING|ERROR): \[[A-Za-z_]+ [\d-]+\]/m, 'vivado'],
+  [/^\| Tool Version : Vivado/m, 'vivado'],
   [/^\*\* (Error|Warning|Fatal|Note):/m, 'nvc'],
   [/^\s*Yosys \d/m, 'yosys'],
   [/nextpnr-/, 'nextpnr'],
